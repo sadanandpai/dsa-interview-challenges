@@ -12,7 +12,7 @@ This repo is in progress
 
 ### Array
 
-- [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array)
+- [Running Sum of 1d Array](./array/1.md)
 - [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)
 - [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array)
 - [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number)
