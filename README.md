@@ -12,7 +12,9 @@ This repo is in progress
 
 ### Array
 
-- [Running Sum of 1d Array](./array/1.md)
+- [Running Sum of 1d Array](./array/1480.md)
+- [Missing Number](https://leetcode.com/problems/missing-number/)
+- [Single Number](https://leetcode.com/problems/single-number/)
 - [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)
 - [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array)
 - [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number)
@@ -24,11 +26,10 @@ This repo is in progress
 - [Fibonacci Number](https://leetcode.com/problems/fibonacci-number)
 - [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference)
 - [Majority Element](https://leetcode.com/problems/majority-element)
-- [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes)
 - [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array)
 - [Missing Number](https://leetcode.com/problems/missing-number)
-- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
+- [Best Time to Buy and Sell Stock](./array/121.md)
 - [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs)
 - [Remove Element](https://leetcode.com/problems/remove-element)
 - [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
