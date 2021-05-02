@@ -47,7 +47,7 @@ This repo is in progress
 1. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)
 1. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array)
 1. [Unique Paths II](https://leetcode.com/problems/unique-paths-ii)
-1. [3Sum](https://leetcode.com/problems/3sum)
+1. [3 Sum](https://leetcode.com/problems/3sum)
 1. [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array)
 
 ### Linked List
@@ -67,3 +67,10 @@ This repo is in progress
 1. [Reorder List](./linked-list/143.md)
 1. [Remove Nth Node From End of List](./linked-list/19.md)
 1. [Rotate List](./linked-list/61.md)
+1. [Remove Duplicates from Sorted List II](./linked-list/82.md)
+
+### Usage Guide
+If you want to know more about using this repo, check out [Usage Guide](./USAGE_GUIDE.md)
+
+### Contributing Guide
+If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./contributing.md)
