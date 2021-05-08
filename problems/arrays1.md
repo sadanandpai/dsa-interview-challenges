@@ -1,4 +1,5 @@
 ## Q1
+
 ## [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array)
 
 ### Approach
@@ -25,30 +26,31 @@ var runningSum = function (nums) {
 - Space: O(1)
 
 ## Q2
+
 ## [Fibonacci Number](https://leetcode.com/problems/fibonacci-number)
 
-
 ## Q3
+
 ## [Missing Number](https://leetcode.com/problems/missing-number/)
 
 ### Approach
 
 - Naive approach would be to mark all the elements of array in a boolean array and then return the element which is not marked
-- Simpler and better approach would be to calculate the sum of all the array items and substract it from total sum using formula n * (n + 1) / 2
+- Simpler and better approach would be to calculate the sum of all the array items and substract it from total sum using formula n \* (n + 1) / 2
 
 ```js
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
-    let totalSum = 0;
-    for(let i=0;i<nums.length; i++){
-        totalSum += nums[i];
-    }
-    
-    const arraySum = (nums.length * (nums.length + 1)) / 2
-    return  arraySum - totalSum;
+var missingNumber = function (nums) {
+  let totalSum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    totalSum += nums[i];
+  }
+
+  const arraySum = (nums.length * (nums.length + 1)) / 2;
+  return arraySum - totalSum;
 };
 ```
 
@@ -58,9 +60,11 @@ var missingNumber = function(nums) {
 - Space: O(1)
 
 ## Q4
+
 ## [Majority Element](https://leetcode.com/problems/majority-element)
 
 ## Q5
+
 ## [Single Number](https://leetcode.com/problems/single-number/)
 
 ### Approach
@@ -94,15 +98,19 @@ var singleNumber = function (nums) {
 - Space: O(1)
 
 ## Q6
+
 ## [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)
 
 ## Q7
+
 ## [Search Insert Position](https://leetcode.com/problems/search-insert-position)
 
 ## Q8
+
 ## [First Bad Version](https://leetcode.com/problems/first-bad-version)
 
 ## Q9
+
 ## [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
 
 ### Approach
@@ -132,12 +140,15 @@ var shuffle = function (nums, n) {
 - Space: O(n)
 
 ## Q10
+
 ## [Two Sum](https://leetcode.com/problems/two-sum)
 
 ## Q11
+
 ## [Move Zeroes](https://leetcode.com/problems/move-zeroes)
 
 ## Q12
+
 ## [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 ### Approach
