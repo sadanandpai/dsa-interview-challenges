@@ -101,6 +101,33 @@ var singleNumber = function (nums) {
 
 ## [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)
 
+### Approach
+
+- Start with a pascal 2D array with default array with value 1. Use nested loops; one for row generation and other for values inside the each row. Let each value of the current row be calculated from previous row values excluding 1st and last element. Prepend and append 1 to each row value (pattern says by default)
+
+```js
+/**
+ * @param {number} numRows
+ * @return {number[][]}
+ */
+var generate = function (numRows) {
+  var pascal = [[1]];
+  for (var i = 1; i < numRows; i++) {
+    pascal[i] = [1];
+    for (var j = 1; j < i; j++) {
+      pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
+    }
+    pascal[i][i] = 1;
+  }
+  return pascal;
+};
+```
+
+##### Complexity
+
+- Time: O(n<sup>2</sup>)
+- Space: O(n<sup>2)</sup>
+
 ## Q7
 
 ## [Search Insert Position](https://leetcode.com/problems/search-insert-position)
@@ -143,9 +170,77 @@ var shuffle = function (nums, n) {
 
 ## [Two Sum](https://leetcode.com/problems/two-sum)
 
+### Approach
+
+- Naive apporach would be to calculate the sum each element of the array with all the other elements in the array. This will check for all the combination of 2 numbers with nested loops
+- Better approach would be to use the hash map to store the elements and check for the complement of the numbers if present in the array in a single pass
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+  // Declare a map to store element and its index
+  const map = {};
+  const length = nums.length;
+
+  for (let i = 0; i < length; i++) {
+    const val = nums[i];
+    // if the complement of the number is present in the array
+    if (map[val] !== undefined) {
+      return [map[val], i];
+    } else {
+      // store the complemented number
+      map[target - nums[i]] = i;
+    }
+  }
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
+
 ## Q11
 
 ## [Move Zeroes](https://leetcode.com/problems/move-zeroes)
+
+### Approach
+
+- Simple apporach would be to move all the non-zero elements to new array and fill rest of the elements with 0
+- Better approach would be to do inplace movement. Two pointers approach can be used here. Keep a zeroPointer and loop index pointer. Keep moving non-zero elements to pointer pointed to zero. Increment the zero for next replacement.
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function (nums) {
+  const length = nums.length;
+  let zeroPointer = -1; // initialize and update the position when zero appears
+
+  for (let i = 0; i < length; i++) {
+    // if number is not zero then move the element to the zeroPointer position and mark current position as zero
+    if (nums[i] !== 0 && zeroPointer !== -1) {
+      nums[zeroPointer] = nums[i];
+      nums[i] = 0;
+      zeroPointer += 1; // increment zeroPointer
+    }
+    // if element is 0, update the zeroPointer for the first time
+    else if (nums[i] === 0 && zeroPointer === -1) {
+      zeroPointer = i;
+    }
+  }
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
 
 ## Q12
 

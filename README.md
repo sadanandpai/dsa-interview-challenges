@@ -67,6 +67,8 @@ This repo is in progress
 1. [Number of Islands](https://leetcode.com/problems/number-of-islands)
 1. [Course Schedule](https://leetcode.com/problems/course-schedule)
 1. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort)
+1. [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold)
+1. [Subsets](https://leetcode.com/problems/subsets)
 
 ### String - Part 1
 
