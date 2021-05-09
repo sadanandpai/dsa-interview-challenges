@@ -1,4 +1,4 @@
-## Q1
+#### Q1
 
 ## [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array)
 
@@ -25,11 +25,11 @@ var runningSum = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-## Q2
+#### Q2
 
 ## [Fibonacci Number](https://leetcode.com/problems/fibonacci-number)
 
-## Q3
+#### Q3
 
 ## [Missing Number](https://leetcode.com/problems/missing-number/)
 
@@ -59,11 +59,11 @@ var missingNumber = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-## Q4
+#### Q4
 
 ## [Majority Element](https://leetcode.com/problems/majority-element)
 
-## Q5
+#### Q5
 
 ## [Single Number](https://leetcode.com/problems/single-number/)
 
@@ -97,7 +97,7 @@ var singleNumber = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-## Q6
+#### Q6
 
 ## [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)
 
@@ -128,15 +128,15 @@ var generate = function (numRows) {
 - Time: O(n<sup>2</sup>)
 - Space: O(n<sup>2)</sup>
 
-## Q7
+#### Q7
 
 ## [Search Insert Position](https://leetcode.com/problems/search-insert-position)
 
-## Q8
+#### Q8
 
 ## [First Bad Version](https://leetcode.com/problems/first-bad-version)
 
-## Q9
+#### Q9
 
 ## [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
 
@@ -166,7 +166,7 @@ var shuffle = function (nums, n) {
 - Time: O(n)
 - Space: O(n)
 
-## Q10
+#### Q10
 
 ## [Two Sum](https://leetcode.com/problems/two-sum)
 
@@ -204,7 +204,7 @@ var twoSum = function (nums, target) {
 - Time: O(n)
 - Space: O(n)
 
-## Q11
+#### Q11
 
 ## [Move Zeroes](https://leetcode.com/problems/move-zeroes)
 
@@ -242,7 +242,7 @@ var moveZeroes = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-## Q12
+#### Q12
 
 ## [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 

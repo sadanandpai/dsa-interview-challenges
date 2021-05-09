@@ -1,4 +1,4 @@
-## Q7
+#### Q7
 
 ## [Unique Paths](https://leetcode.com/problems/unique-paths)
 
@@ -51,7 +51,7 @@ function getPaths(i, j, m, n, paths) {
 - Time: O(n)
 - Space: O(n)
 
-## Q8
+#### Q8
 
 ## [Unique Paths II](./problems/arrays4.md#Q8)
 
