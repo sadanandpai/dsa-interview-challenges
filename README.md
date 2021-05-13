@@ -4,7 +4,7 @@ This repo provides a collection data structures and algorithms problems list alo
 
 ---
 
-This repo is in progress
+<span style="color:red">This repo is in progress and not complete still</span>
 
 ---
 
