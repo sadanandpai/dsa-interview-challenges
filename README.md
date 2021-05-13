@@ -4,7 +4,7 @@ This repo provides a collection data structures and algorithms problems list alo
 
 ---
 
-<span style="color:red">This repo is in progress and not complete still</span>
+![](https://via.placeholder.com/15/f03c15/000000?text=+) This repo is in progress and not complete still ![](https://via.placeholder.com/15/f03c15/000000?text=+)
 
 ---
 
