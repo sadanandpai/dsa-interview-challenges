@@ -10,7 +10,7 @@ This repo provides a collection data structures and algorithms problems list alo
 
 ## Problems by category
 
-### Array 1D - Part 1
+### Array 1D - Warm Up
 
 1. [Running Sum of 1d Array](./problems/arrays1.md#Q1)
 1. [Fibonacci Number](./problems/arrays1.md#Q2)
@@ -25,7 +25,7 @@ This repo provides a collection data structures and algorithms problems list alo
 1. [Move Zeroes](./problems/arrays1.md#Q11)
 1. [Best Time to Buy and Sell Stock](./problems/arrays1.md#Q12)
 
-### Array 1D - Part 2
+### Array 1D - Part 1
 
 1. [How Many Numbers Are Smaller Than the Current Number](./problems/arrays2.md#Q1)
 1. [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array)
@@ -40,7 +40,7 @@ This repo provides a collection data structures and algorithms problems list alo
 1. [Rotate Array](https://leetcode.com/problems/rotate-array)
 1. [Merge Intervals](https://leetcode.com/problems/merge-intervals)
 
-### Array 1D - Part 3
+### Array 1D - Part 2
 
 1. [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs)
 1. [House Robber](https://leetcode.com/problems/house-robber)
@@ -52,6 +52,7 @@ This repo provides a collection data structures and algorithms problems list alo
 1. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
 1. [Jump Game](https://leetcode.com/problems/jump-game)
 1. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence)
+1. [Subsets](https://leetcode.com/problems/subsets)
 
 ### Array 2D
 
@@ -68,7 +69,6 @@ This repo provides a collection data structures and algorithms problems list alo
 1. [Course Schedule](https://leetcode.com/problems/course-schedule)
 1. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort)
 1. [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold)
-1. [Subsets](https://leetcode.com/problems/subsets)
 
 ### String - Part 1
 
