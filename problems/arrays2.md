@@ -1,72 +1,101 @@
-#### Q1
+#### Q7
 
-## [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
+## [Unique Paths](https://leetcode.com/problems/unique-paths)
 
 ### Approach
 
-- Good approach would be to sort the elements after copying in to a new array
-- As the problem has limited range of numbers, we can sort by storing count of occurences. The smaller elements can be counted using this.
-
-#### Solution 1
+- The problem requires each and every path to be traced which goes to the destination. If a path if found to be successful the total paths can be incremented by one
+- Try to search the paths recursively from each cell of the matrix starting from 0, 0 and go in the directions of bottom and top
+- Memoization can be used to avoid repetition
 
 ```js
 /**
- * @param {number[]} nums
- * @return {number[]}
+ * @param {number} m
+ * @param {number} n
+ * @return {number}
  */
-var smallerNumbersThanCurrent = function (nums) {
-  let sortedArray = [...nums];
-  sortedArray = sortedArray.sort((a, b) => a - b);
-  const smallerElementsCountArray = [];
+var uniquePaths = function (m, n) {
+  const paths = Array.from(new Array(m), () => []);
+  return getPaths(0, 0, m, n, paths);
+};
 
-  for (let i = 0; i < nums.length; i++) {
-    smallerElementsCountArray.push(sortedArray.indexOf(nums[i]));
+function getPaths(i, j, m, n, paths) {
+  // no paths found if cell indices are out of the matrix
+  if (i >= m || j >= n) {
+    return 0;
   }
 
-  return smallerElementsCountArray;
-};
+  // return memoized count if already found for the cell
+  if (paths[i][j]) {
+    return paths[i][j];
+  }
+
+  // when destination is found
+  if (i === m - 1 && j === n - 1) {
+    return 1;
+  }
+
+  // Add the number of paths possible in right and bottom directions
+  let totalPaths = 0;
+  totalPaths += getPaths(i + 1, j, m, n, paths);
+  totalPaths += getPaths(i, j + 1, m, n, paths);
+
+  paths[i][j] = totalPaths;
+
+  return totalPaths;
+}
 ```
 
 ##### Complexity
 
-- Time: O(nlogn)
+- Time: O(n)
 - Space: O(n)
 
-#### Solution 2
+#### Q8
+
+## [Unique Paths II](./problems/arrays4.md#Q8)
+
+### Approach
+
+- Solution is almost similar to the previous problem, except we do an additional check if the obstacle grid has obstacle or not
 
 ```js
 /**
- * @param {number[]} nums
- * @return {number[]}
+ * @param {number[][]} obstacleGrid
+ * @return {number}
  */
-var smallerNumbersThanCurrent = function (nums) {
-  const length = nums.length;
-  const limit = 100;
-  let countArray = [];
-
-  // Keep count of occurences of array elements and we know they are within 0 to 100
-  for (let i = 0; i < length; i++) {
-    countArray[nums[i]] = countArray[nums[i]] ? countArray[nums[i]] + 1 : 1;
-  }
-
-  // update the countArray with count of all the smaller elements than current element
-  let countOfElementsSoFar = 0;
-  for (let i = 0; i <= limit; i++) {
-    if (countArray[i]) {
-      const currentCount = countArray[i];
-      countArray[i] = countOfElementsSoFar;
-      countOfElementsSoFar += currentCount;
-    }
-  }
-
-  // Create new array for the input array
-  const smallerElementsCountArray = [];
-  for (let i = 0; i < length; i++) {
-    smallerElementsCountArray.push(countArray[nums[i]]);
-  }
-
-  return smallerElementsCountArray;
+var uniquePathsWithObstacles = function (obstacleGrid) {
+  const m = obstacleGrid.length;
+  const n = obstacleGrid[0].length;
+  const paths = Array.from(new Array(m), () => []);
+  return getPaths(0, 0, m, n, obstacleGrid, paths);
 };
+
+function getPaths(i, j, m, n, obstacleGrid, paths) {
+  // no paths found if cell indices are out of the matrix or obstacle is present
+  if (i >= m || j >= n || obstacleGrid[i][j] === 1) {
+    return 0;
+  }
+
+  // return memoized count if already found for the cell
+  if (paths[i][j]) {
+    return paths[i][j];
+  }
+
+  // when destination is found
+  if (i === m - 1 && j === n - 1) {
+    return 1;
+  }
+
+  // Add the number of paths possible in right and bottom directions
+  let totalPaths = 0;
+  totalPaths += getPaths(i + 1, j, m, n, obstacleGrid, paths);
+  totalPaths += getPaths(i, j + 1, m, n, obstacleGrid, paths);
+
+  paths[i][j] = totalPaths;
+
+  return totalPaths;
+}
 ```
 
 ##### Complexity
