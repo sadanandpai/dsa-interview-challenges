@@ -12,18 +12,18 @@ This repo provides a collection data structures and algorithms problems list alo
 
 ### Newbie
 
-1. [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
-1. [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
-1. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
-1. [Search Insert Position](./problems/warmup.md#Q5)
-1. [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
-1. [Reverse String](https://leetcode.com/problems/reverse-string/)
-1. [Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum/)
-1. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
-1. [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)
-1. [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)
-1. [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/)
-1. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)
+1. [Running Sum of 1d Array](./problems/newbie.md#Q1)
+1. [Fibonacci Number](./problems/newbie.md#Q2)
+1. [Shuffle the Array](./problems/newbie.md#Q3)
+1. [Search Insert Position](./problems/newbie.md#Q4)
+1. [Pascal's Triangle](./problems/newbie.md#Q5)
+1. [Reverse String](./problems/newbie.md#Q6)
+1. [Matrix Diagonal Sum](./problems/newbie.md#Q7)
+1. [Reverse Integer](./problems/newbie.md#Q8)
+1. [Jewels and Stones](./problems/newbie.md#Q9)
+1. [Kids With the Greatest Number of Candies](./problems/newbie.md#Q10)
+1. [Maximum Product of Two Elements in an Array](./problems/newbie.md#Q11)
+1. [Merge Sorted Array](./problems/newbie.md#Q12)
 
 ### Warm Up
 
@@ -44,10 +44,10 @@ This repo provides a collection data structures and algorithms problems list alo
 
 1. [Container With Most Water](https://leetcode.com/problems/container-with-most-water)
 1. [House Robber](https://leetcode.com/problems/house-robber)
+1. [Sort Colors](https://leetcode.com/problems/sort-colors/)
 1. [Subsets](https://leetcode.com/problems/subsets)
 1. [Combination Sum](https://leetcode.com/problems/combination-sum)
 1. [3 Sum](https://leetcode.com/problems/3sum)
-1. [Sort Colors](https://leetcode.com/problems/sort-colors/)
 1. [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number)
 1. [Coin Change](https://leetcode.com/problems/coin-change)
 1. [Jump Game](https://leetcode.com/problems/jump-game)
