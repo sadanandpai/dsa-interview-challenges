@@ -101,44 +101,6 @@ var singleNumber = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-#### Q5
-
-## [Search Insert Position](https://leetcode.com/problems/search-insert-position)
-
-### Approach
-
-- Naive approach would be start from left side of the array and insert at a point where you find the first match or next higher number. This approach works very well for small arrays.
-- As the array is already sorted Binary search can be modified to reduce the time complexity
-
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var searchInsert = function (nums, target) {
-  let low = 0;
-  let high = nums.length - 1;
-  let mid, value;
-
-  while (low <= high) {
-    mid = Math.floor((low + high) / 2); // obtain the mid value
-
-    value = nums[mid];
-    if (nums[mid] === target) return mid;
-    else if (nums[mid] < target) low = mid + 1;
-    else if (nums[mid] > target) high = mid - 1;
-  }
-
-  return low; // low points to the position of insertion if match found or not
-};
-```
-
-##### Complexity
-
-- Time: O(n<sup>2</sup>)
-- Space: O(n<sup>2)</sup>
-
 #### Q6
 
 ## [Two Sum](https://leetcode.com/problems/two-sum)

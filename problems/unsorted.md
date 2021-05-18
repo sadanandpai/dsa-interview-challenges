@@ -1,5 +1,3 @@
-1. [Rotate Array](https://leetcode.com/problems/rotate-array)
-1. [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array)
 1. [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array)
 1. [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs)
 1. [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets)
