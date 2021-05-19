@@ -101,7 +101,7 @@ var singleNumber = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-#### Q6
+#### Q5
 
 ## [Two Sum](https://leetcode.com/problems/two-sum)
 
@@ -139,7 +139,7 @@ var twoSum = function (nums, target) {
 - Time: O(n)
 - Space: O(n)
 
-#### Q7
+#### Q6
 
 ## [Move Zeroes](https://leetcode.com/problems/move-zeroes)
 
@@ -177,7 +177,7 @@ var moveZeroes = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
-#### Q12
+#### Q11
 
 ## [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
 
@@ -252,3 +252,42 @@ var smallerNumbersThanCurrent = function (nums) {
 
 - Time: O(n)
 - Space: O(n)
+
+#### Q12
+
+## [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+### Approach
+
+- Naive approach would be to check the highest profit by considering each value of the array with all the next values of the array
+- A better approach would be to keep checking the profit with least value so far with the current array value and store the maximum profit so far obtained.
+
+```js
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function (prices) {
+  let profit = 0; // start profit as 0 which is minimum possible profit even if no transactions are done
+  let low = 0;
+
+  for (let i = 1; i < prices.length; i++) {
+    // store the minimum array index in low
+    if (prices[low] > prices[i]) {
+      low = i;
+    }
+
+    // if the difference between current array and lowest value so far is highest, store it as profit
+    if (prices[i] - prices[low] > profit) {
+      profit = prices[i] - prices[low];
+    }
+  }
+
+  return profit;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
