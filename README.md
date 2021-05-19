@@ -31,14 +31,14 @@ This repo provides a collection data structures and algorithms problems list alo
 1. [Majority Element](./problems/warmup.md#Q2)
 1. [Single Number](./problems/warmup.md#Q3)
 1. [Rotate Array](https://leetcode.com/problems/rotate-array/)
-1. [Two Sum](./problems/warmup.md#Q6)
-1. [Move Zeroes](./problems/warmup.md#Q7)
+1. [Two Sum](./problems/warmup.md#Q5)
+1. [Move Zeroes](./problems/warmup.md#Q6)
 1. [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 1. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
 1. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array)
 1. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)
-1. [How Many Numbers Are Smaller Than the Current Number](./problems/warmup.md#Q12)
-1. [Best Time to Buy and Sell Stock](./problems/arrays1.md#Q1)
+1. [How Many Numbers Are Smaller Than the Current Number](./problems/warmup.md#Q11)
+1. [Best Time to Buy and Sell Stock](./problems/warmup.md#Q12)
 
 ### Array 1D
 
