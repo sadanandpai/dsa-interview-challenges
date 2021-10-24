@@ -250,6 +250,66 @@ var moveZeroes = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
+#### Q7
+
+## [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+
+### Approach
+
+- The square of both negative and positive numeber will be a positive number. And also we know the array is already sorted.
+- Two pointer approach can be used here, and the squares of the numbers can be filled in the new array in the reverse order. (Creating squared array in ascending order is lengthier task)
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function(nums) {
+  const length = nums.length;
+  let i = 0;
+  let j = length - 1;
+
+  const sortedArray = new Array(length);
+  let pointer = length - 1; // ponter to fill the squares from last poisition
+
+  while(i <= j){
+    // Make the absolute value comparision
+    if(Math.abs(nums[i]) > Math.abs(nums[j])){
+      sortedArray[pointer--] = nums[i] * nums[i];
+      i += 1;
+    }
+    else {
+      sortedArray[pointer--] = nums[j] * nums[j];
+      j -= 1;
+    }
+  }
+
+  return sortedArray;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
+
+#### Q8
+
+## [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+### Approach
+
+- 
+
+```js
+
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
+
 #### Q11
 
 ## [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
