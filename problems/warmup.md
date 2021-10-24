@@ -101,6 +101,79 @@ var singleNumber = function (nums) {
 - Time: O(n)
 - Space: O(1)
 
+#### Q4
+
+## [Rotate Array](https://leetcode.com/problems/rotate-array/)
+
+### Approach
+
+- Simple approach would be to store the last length - k elements in an array and move all the k elements to end of the array. Then restore back the moved elements to the starting of the array
+- A better approach hwihtout using an additional array is to
+  - Reverse the whole array
+  - Reverse 1st k elements
+  - Reverse the rest of the elements
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var rotate = function(nums, k) {
+    const length = nums.length;
+    k = k % length;
+    
+    // store last length - k elements in an array
+    const memArray = nums.slice(length - k);
+    
+    // move the k elements to array end (if not done in reverse order, elements will get overridden)
+    for(let i = length - 1, j = i - k; i >= k; i--, j--){
+        nums[i] = nums[j];
+    }
+    
+    // replace the starting of the array with stored array elements
+    for(let i = 0; i < memArray.length; i++){
+        nums[i] = memArray[i];
+    }
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+// Helper function to reverse the array in place
+var reverse = function (array, start, end){
+    for(let i = start, j = end; i <= start + (end - start) / 2; i++, j--){
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+var rotate = function(nums, k) {
+    const length = nums.length;
+    k = k % length;
+    
+    reverse(nums, 0, length - 1); // rotate complete array
+    reverse(nums, 0, k - 1);  // rotate 1st k elements
+    reverse(nums, k, length - 1); // rotate rest of the elements
+};
+
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
+
 #### Q5
 
 ## [Two Sum](https://leetcode.com/problems/two-sum)
