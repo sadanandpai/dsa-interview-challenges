@@ -299,16 +299,33 @@ var sortedSquares = function(nums) {
 
 ### Approach
 
-- 
+- The solution is the direct implementation of [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem)
 
 ```js
-
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
+    let highest = nums[0];  // highest local subarray sum
+    let highestSoFar = nums[0]; // highest subarray sum
+    let total;
+    
+    // Kadane's algorithm logic
+    for(let i=1;i<nums.length; i++){
+        total = highest + nums[i];
+        highest = total > nums[i] ? total : nums[i];
+        highestSoFar = highest > highestSoFar ? highest : highestSoFar;
+    }
+        
+    return highestSoFar;
+};
 ```
 
 ##### Complexity
 
 - Time: O(n)
-- Space: O(n)
+- Space: O(1)
 
 #### Q11
 
