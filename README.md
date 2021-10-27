@@ -5,10 +5,11 @@
   <p>
       <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
       <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/dsa-for-fe-devs?logoColor=green&style=for-the-badge"></a>
-      <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/dsa-for-fe-devs?logoColor=green&style=for-the-badge"></a>
       <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg?style=for-the-badge"></a>
       <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
   </p>
+  
+  Go through [Usage Guide](./problems/USAGE_GUIDE.md) before start using this repo
 </div>
 
 ---
@@ -127,14 +128,6 @@
 1. [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 1. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 
-### Usage Guide
-
-If you want to know more about using this repo, check out [Usage Guide](./problems/USAGE_GUIDE.md)
-
-### Contributing Guide
-
-If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./problems/contributing.md)
-
 ### Stargazers
 
 [![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/stargazers)
@@ -142,6 +135,10 @@ If you want to contribute, improve or suggest changes to this repo, then check o
 ### Forkers
 
 [![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/network/members)
+
+### Contributing Guide
+
+If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./problems/contributing.md)
 
 ### License
 
