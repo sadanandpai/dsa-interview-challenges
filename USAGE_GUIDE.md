@@ -5,5 +5,5 @@
 - Click on the problem link
 - Try solving the problem
 - Refer to the approach discussed in the repo, and go through the coded solution
-- Retry the same problem in leetcode with the approach mentioned in the repo is better than your approach
+- Retry the same problem in leetcode with the approach mentioned in the repo (if better than your approach)
 - Try attempting and solving all the problems listed in this repo to get the most out of this repo
