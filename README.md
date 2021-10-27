@@ -3,11 +3,11 @@
   <p>Collection data structures and algorithms problems<br> along with the solution in JavaScript to crack frontend engineering interviews.</p>
   <img src="./programmer.svg" height="250px" />
   <p>
-      <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-for-front-end-dev?style=for-the-badge"></a>
-      <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/dsa-for-front-end-dev?logoColor=green&style=for-the-badge"></a>
-      <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/dsa-for-front-end-dev?logoColor=green&style=for-the-badge"></a>
+      <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
+      <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/dsa-for-fe-devs?logoColor=green&style=for-the-badge"></a>
+      <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/dsa-for-fe-devs?logoColor=green&style=for-the-badge"></a>
       <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg?style=for-the-badge"></a>
-      <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-for-front-end-dev?style=for-the-badge"></a>
+      <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
   </p>
 </div>
 
@@ -137,11 +137,11 @@ If you want to contribute, improve or suggest changes to this repo, then check o
 
 ### Stargazers
 
-[![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/dsa-for-front-end-dev)](https://github.com/sadanandpai/dsa-for-front-end-dev/stargazers)
+[![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/stargazers)
 
 ### Forkers
 
-[![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-front-end-dev)](https://github.com/sadanandpai/dsa-for-front-end-dev/network/members)
+[![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/network/members)
 
 ### License
 
