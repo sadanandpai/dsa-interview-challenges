@@ -1,14 +1,17 @@
-# Data structures and algorithms for front-end developers
-
-This repo provides a collection data structures and algorithms problems list along with the solution in JavaScript that one can refer or practice for front-end engineering interviews.
+<div align="center">
+  <h1>DSA for front-end developers</h1>
+  <p>Collection data structures and algorithms problems<br> along with the solution in JavaScript to crack front-end engineering interviews.</p>
+  <img src="./programmer.svg" height="250px" />
+  <p>
+      <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-for-front-end-dev?style=for-the-badge"></a>
+      <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/dsa-for-front-end-dev?logoColor=green&style=for-the-badge"></a>
+      <a name="contributions"><img src="https://img.shields.io/github/contributors/sadanandpai/dsa-for-front-end-dev?logoColor=green&style=for-the-badge"></a>
+      <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg?style=for-the-badge"></a>
+      <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-for-front-end-dev?style=for-the-badge"></a>
+  </p>
+</div>
 
 ---
-
-![](https://via.placeholder.com/15/f03c15/000000?text=+) This repo is in progress and not complete still ![](https://via.placeholder.com/15/f03c15/000000?text=+)
-
----
-
-## Problems by category
 
 ### Newbie
 
@@ -131,3 +134,15 @@ If you want to know more about using this repo, check out [Usage Guide](./proble
 ### Contributing Guide
 
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./problems/contributing.md)
+
+### Stargazers
+
+[![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/dsa-for-front-end-dev)](https://github.com/sadanandpai/dsa-for-front-end-dev/stargazers)
+
+### Forkers
+
+[![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-front-end-dev)](https://github.com/sadanandpai/dsa-for-front-end-dev/network/members)
+
+### License
+
+This repository is MIT licensed. [Read more](./LICENSE)
