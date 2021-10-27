@@ -9,7 +9,7 @@
       <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
   </p>
   
-  Go through [Usage Guide](./problems/USAGE_GUIDE.md) before start using this repo
+  Go through [Usage Guide](./USAGE_GUIDE.md) before start using this repo
 </div>
 
 ---
