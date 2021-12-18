@@ -180,7 +180,7 @@ var rotate = function(nums, k) {
 
 ### Approach
 
-- Naive apporach would be to calculate the sum each element of the array with all the other elements in the array. This will check for all the combination of 2 numbers with nested loops
+- Naive apporach would be to calculate the sum of each element of the array with all the other elements in the array. This will check for all the combination of 2 numbers with nested loops
 - Better approach would be to use the hash map to store the elements and check for the complement of the numbers if present in the array in a single pass
 
 ```js
