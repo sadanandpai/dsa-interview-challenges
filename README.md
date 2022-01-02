@@ -1,6 +1,6 @@
 <div align="center">
   <h1>DSA Interview Challenges</h1>
-  <p>Curated list of data structures and algorithms problems<br> along with the solution in JavaScript to crack engineering interviews.</p>
+  <p>A curated list of data structures and algorithms problems <br> along with the solution in JavaScript to crack engineering interviews</p>
   <img src="./programmer.svg" height="250px" />
   <p>
       <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-interview-challenges?style=for-the-badge"></a>
