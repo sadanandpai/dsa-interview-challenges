@@ -3,10 +3,10 @@
   <p>Curated list of data structures and algorithms problems<br> along with the solution in JavaScript to crack engineering interviews.</p>
   <img src="./programmer.svg" height="250px" />
   <p>
-      <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
-      <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/dsa-for-fe-devs?logoColor=green&style=for-the-badge"></a>
+      <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-interview-challenges?style=for-the-badge"></a>
+      <a name="forks"><img src="https://img.shields.io/github/forks/sadanandpai/dsa-interview-challenges?logoColor=green&style=for-the-badge"></a>
       <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg?style=for-the-badge"></a>
-      <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
+      <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-interview-challenges?style=for-the-badge"></a>
   </p>
   
   Go through [Usage Guide](./USAGE_GUIDE.md) before you start solving
@@ -130,11 +130,11 @@
 
 ### Stargazers
 
-[![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/stargazers)
+[![Stargazers repo roster for @sadanandpai/dsa-interview-challenges](https://reporoster.com/stars/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/stargazers)
 
 ### Forkers
 
-[![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/network/members)
+[![Forkers repo roster for @sadanandpai/dsa-interview-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-for-fe-devs/network/members)
 
 ### Contributing Guide
 
