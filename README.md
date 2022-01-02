@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>DSA for Frontend Developers</h1>
-  <p>Collection data structures and algorithms problems<br> along with the solution in JavaScript to crack frontend engineering interviews.</p>
+  <h1>DSA Interview Challenges</h1>
+  <p>Curated list of data structures and algorithms problems<br> along with the solution in JavaScript to crack engineering interviews.</p>
   <img src="./programmer.svg" height="250px" />
   <p>
       <a name="stars"><img src="https://img.shields.io/github/stars/sadanandpai/dsa-for-fe-devs?style=for-the-badge"></a>
