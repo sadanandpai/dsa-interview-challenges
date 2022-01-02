@@ -130,11 +130,11 @@
 
 ### Stargazers
 
-[![Stargazers repo roster for @sadanandpai/dsa-interview-challenges](https://reporoster.com/stars/sadanandpai/dsa-interview-challenges)](https://github.com/sadanandpai/dsa-for-fe-devs/stargazers)
+[![Stargazers repo roster for @sadanandpai/dsa-interview-challenges](https://reporoster.com/stars/sadanandpai/dsa-interview-challenges)](https://github.com/sadanandpai/dsa-interview-challenges/stargazers)
 
 ### Forkers
 
-[![Forkers repo roster for @sadanandpai/dsa-interview-challenges](https://reporoster.com/forks/sadanandpai/dsa-for-fe-devs)](https://github.com/sadanandpai/dsa-interview-challenges/network/members)
+[![Forkers repo roster for @sadanandpai/dsa-interview-challenges](https://reporoster.com/forks/sadanandpai/dsa-interview-challenges)](https://github.com/sadanandpai/dsa-interview-challenges/network/members)
 
 ### Contributing Guide
 
