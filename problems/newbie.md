@@ -255,9 +255,9 @@ var reverse = function (x) {
   x = Math.abs(x);
 
   let remainder;
-  while (x !== 0) {
-    reversedNum = reversedNum * 10 + remainder; // get the remainder
-    reversedNum *= 10 + remainder;
+  while (x) {
+    remainder = x % 10; // get the remainder
+    reversedNum = reversedNum*10 + remainder;
     x = Math.floor(x / 10); // get the integer excluding remainder
   }
 
