@@ -10,7 +10,7 @@
   </p>
   
   Go through [Usage Guide](./USAGE_GUIDE.md) before you start solving<br>
-  To download all the challenges as pdf,  <a href="./problems/DSA_challenges.pdf"><click here</a>
+  To download all the challenges as pdf, <a href="./problems/DSA_challenges.pdf">click here</a>
 </div>
 
 ---
