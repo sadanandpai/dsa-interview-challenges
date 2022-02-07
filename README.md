@@ -9,7 +9,8 @@
       <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/dsa-interview-challenges?style=for-the-badge"></a>
   </p>
   
-  Go through [Usage Guide](./USAGE_GUIDE.md) before you start solving
+  Go through [Usage Guide](./USAGE_GUIDE.md) before you start solving<br>
+  To download all the challenges as pdf,  <a href="./problems/DSA_challenges.pdf"><click here</a>
 </div>
 
 ---
