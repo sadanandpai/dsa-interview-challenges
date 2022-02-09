@@ -139,7 +139,7 @@
 
 ### Contributing Guide
 
-If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./problems/contributing.md)
+If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./CONTRIBUTING.md)
 
 ### License
 
