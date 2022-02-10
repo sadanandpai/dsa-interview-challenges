@@ -6,7 +6,7 @@
   - If there are multiple approaches to the problem, explain each each approach briefly
   - Coded solution can be provided for the optimum approach
   - The coded solution should not have any bugs and should be accepted when run in leetcode
-- Problem can have multiple solutions, onnly if necessary.
+- Problem can have multiple solutions, only if necessary.
 - Time and space complexity should be cleary stated below the solution
 - Include the external links of valid references if necessary
 - Comment the coded solution wherever necessary
