@@ -47,10 +47,10 @@
 
 ### Array 1D
 
-1. [Container With Most Water](https://leetcode.com/problems/container-with-most-water)
-1. [House Robber](https://leetcode.com/problems/house-robber)
-1. [Sort Colors](https://leetcode.com/problems/sort-colors/)
-1. [Subsets](https://leetcode.com/problems/subsets)
+1. [Container With Most Water](./problems/arrays1.md#1)
+1. [House Robber](./problems/arrays1.md#2)
+1. [Sort Colors](./problems/arrays1.md#3)
+1. [Subsets](./problems/arrays1.md#4)
 1. [Combination Sum](https://leetcode.com/problems/combination-sum)
 1. [3 Sum](https://leetcode.com/problems/3sum)
 1. [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number)
