@@ -1,0 +1,41 @@
+### [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+
+- Naive approach would be start from left side of the array and insert at a point where you find the first match or next higher number. This approach works very well for small arrays.
+- As the array is already sorted Binary search can be modified to reduce the time complexity
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function (nums, target) {
+    let low = 0, high = nums.length - 1;
+    let ans = nums.length;
+
+    if(target > nums.at(-1)){ // if target is greater than the last element
+        return ans;
+    }
+
+    while (low <= high) {
+        const mid = Math.floor((low + high) / 2); // obtain the mid value
+
+        if (nums[mid] === target) {
+            return mid;
+        } else if (nums[mid] >= target) {
+            ans = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    return ans;
+};
+
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)

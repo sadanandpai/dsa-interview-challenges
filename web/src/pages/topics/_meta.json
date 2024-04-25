@@ -11,13 +11,12 @@
   },
   "array": "Array",
   "string": "String",
-  "binarySearch": "Binary Search",
-  "dynamicProgramming": "Dynamic Programming",
-  "greedyAlgorithm": "Greedy Algorithm",
-  "divideAndConquer": "Divide and Conquer",
-  "backtracking": "Backtracking",
-  "graph": "Graph",
-  "tree": "Tree",
+  "binary-search": "Binary Search",
   "linkedList": "Linked List",
-  "hashTable": "Hash Table"
+  "hashTable": "Hash Table",
+  "greedy": "Greedy Algorithm",
+  "tree": "Tree",
+  "dynamic-programming": "Dynamic Programming",
+  "backtracking": "Backtracking",
+  "graph": "Graph"
 }

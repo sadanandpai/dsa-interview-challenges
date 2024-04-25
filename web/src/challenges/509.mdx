@@ -1,0 +1,29 @@
+### [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+
+- A good approach would be calculate the nth fibonacci number either recursively or iteratively
+- As we know nth fibonacci number is sum of n-1 th and n-2th fibonacci numbers, we can start from 1st position till we calculate nth.
+
+```js copy
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var fib = function (n) {
+  // initialize 0th and 1st fibonacci numbers
+  let fib1 = 0,
+    fib2 = 1;
+
+  for (let i = 1; i <= n; i++) {
+    temp = fib2;
+    fib2 = fib1 + fib2; // next fibonacci number is sum of current and next
+    fib1 = temp; // current fibonacci number is next fibonacci number
+  }
+
+  return fib1;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
