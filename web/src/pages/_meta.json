@@ -1,0 +1,21 @@
+{
+  "index": {
+    "title": "Home",
+    "theme": {
+      "footer": false,
+      "toc": false,
+      "breadcrumb": false,
+      "pagination": false,
+      "sidebar": true
+    },
+    "display": "hidden"
+  },
+  "topics": {
+    "title": "Topics",
+    "type": "page"
+  },
+  "difficulty": {
+    "title": "Difficulty",
+    "type": "page"
+  }
+}
