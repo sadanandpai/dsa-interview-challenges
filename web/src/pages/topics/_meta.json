@@ -8,5 +8,16 @@
       "pagination": false,
       "sidebar": true
     }
-  }
+  },
+  "array": "Array",
+  "string": "String",
+  "binarySearch": "Binary Search",
+  "dynamicProgramming": "Dynamic Programming",
+  "greedyAlgorithm": "Greedy Algorithm",
+  "divideAndConquer": "Divide and Conquer",
+  "backtracking": "Backtracking",
+  "graph": "Graph",
+  "tree": "Tree",
+  "linkedList": "Linked List",
+  "hashTable": "Hash Table"
 }
