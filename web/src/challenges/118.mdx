@@ -1,0 +1,30 @@
+### [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)
+
+- Start with a pascal 2D array with default array with value 1. Use nested loops; one for row generation and other for values inside the each row. 
+- Let each value of the current row be calculated from previous row values excluding 1st and last element. Prepend and append 1 to each row value (pattern says by default)
+
+```js copy
+/**
+ * @param {number} numRows
+ * @return {number[][]}
+ */
+var generate = function (numRows) {
+  var pascal = [[1]];
+
+  for (var i = 1; i < numRows; i++) {
+    pascal[i] = [1]; // 1st element of all the rows is 1
+
+    for (var j = 1; j < i; j++) {
+      pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
+    }
+
+    pascal[i][i] = 1; // last element of all the rows is 1
+  }
+  return pascal;
+};
+```
+
+##### Complexity
+
+- Time: O(n<sup>2</sup>)
+- Space: O(n<sup>2</sup>)
