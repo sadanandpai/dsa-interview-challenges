@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 const metaTags = (
   <>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -39,7 +41,7 @@ const metaTags = (
   </>
 );
 
-export default {
+const config = {
   head: metaTags,
   logo: <span>DSA Interview Challenges</span>,
   docsRepositoryBase:
@@ -78,3 +80,5 @@ export default {
     ),
   },
 };
+
+export default config;
