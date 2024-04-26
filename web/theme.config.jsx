@@ -12,7 +12,7 @@ const metaTags = (
       content="https://dsa-interview-challenges.vercel.app/"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="DSA Intereview Challenges" />
+    <meta property="og:title" content="DSA Interview Challenges" />
     <meta
       property="og:description"
       content="A curated list of data structures and algorithms problems along with the solution to crack engineering interviews"
@@ -28,7 +28,7 @@ const metaTags = (
       property="twitter:url"
       content="https://dsa-interview-challenges.vercel.app/"
     />
-    <meta name="twitter:title" content="DSA Intereview Challenges" />
+    <meta name="twitter:title" content="DSA Interview Challenges" />
     <meta
       name="twitter:description"
       content="A curated list of data structures and algorithms problems along with the solution to crack engineering interviews"
