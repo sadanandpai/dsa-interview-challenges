@@ -12,7 +12,7 @@ const metaTags = (
       content="https://dsa-interview-challenges.vercel.app/"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="JavaScript Code Challenges" />
+    <meta property="og:title" content="DSA Intereview Challenges" />
     <meta
       property="og:description"
       content="A curated list of data structures and algorithms problems along with the solution to crack engineering interviews"
@@ -20,7 +20,7 @@ const metaTags = (
     <meta
       name="image"
       property="og:image"
-      content="https://dsa-interview-challenges.vercel.app/programmer.svg"
+      content="https://dsa-interview-challenges.vercel.app/programmer.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="jscodechallenges.vercel.app" />
@@ -28,14 +28,14 @@ const metaTags = (
       property="twitter:url"
       content="https://dsa-interview-challenges.vercel.app/"
     />
-    <meta name="twitter:title" content="JavaScript Code Challenges" />
+    <meta name="twitter:title" content="DSA Intereview Challenges" />
     <meta
       name="twitter:description"
       content="A curated list of data structures and algorithms problems along with the solution to crack engineering interviews"
     />
     <meta
       name="twitter:image"
-      content="https://dsa-interview-challenges.vercel.app/programmer.svg"
+      content="https://dsa-interview-challenges.vercel.app/programmer.png"
     />
     <meta name="author" content="Sadanand Pai" />
   </>
