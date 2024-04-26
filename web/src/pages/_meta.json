@@ -10,12 +10,12 @@
     },
     "display": "hidden"
   },
-  "topics": {
-    "title": "Topics",
-    "type": "page"
-  },
   "difficulty": {
     "title": "Difficulty",
+    "type": "page"
+  },
+  "topics": {
+    "title": "Topics",
     "type": "page"
   }
 }
