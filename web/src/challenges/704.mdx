@@ -1,0 +1,33 @@
+### [Binary Search](https://leetcode.com/problems/binary-search/description/)
+
+- Binary search is a search algorithm that finds the position of a target value within a sorted array
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function (nums, target) {
+    let left = 0, right = nums.length - 1, mid;
+
+    while (left <= right) {
+        mid = Math.floor((left + right) / 2);
+
+        if (nums[mid] === target) {
+            return mid;
+        } else if (nums[mid] > target) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    return -1;
+};
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)
