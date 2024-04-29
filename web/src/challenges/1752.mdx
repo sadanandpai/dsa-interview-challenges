@@ -1,0 +1,31 @@
+### [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)
+
+- In a sorted array, if current value is greater than the next value, then it is unsorted pair
+- In a rotated sorted array, there will be only at max one unsorted pair
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var check = function (nums) {
+    let unsortedCount = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > nums[(i + 1) % nums.length]) {
+            unsortedCount++;
+        }
+
+        if (unsortedCount > 1) {
+            return false;
+        }
+    }
+
+    return true;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

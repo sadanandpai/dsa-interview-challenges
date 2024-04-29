@@ -1,0 +1,45 @@
+### [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+
+- If the array is not rotated, the first element is smaller than last element
+- Else check if mid or mid + 1 is the start of the rotation
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMin = function (nums) {
+    if (nums.length == 1) {
+        return nums[0];
+    }
+
+    let left = 0, right = nums.length - 1;
+    if (nums[left] < nums[right]) {
+        return nums[0];
+    }
+
+    while (left <= right) {
+        const mid = left + Math.floor((right - left) / 2);
+
+        // check if mid or mid + 1 is the start of the rotation
+        if (nums[mid] > nums[mid + 1]) {
+            return nums[mid + 1];
+        } else if (nums[mid - 1] > nums[mid]) {
+            return nums[mid];
+        }
+
+        if (nums[0] < nums[mid]) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return nums[0];
+};
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)
