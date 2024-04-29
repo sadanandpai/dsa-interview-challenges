@@ -20,5 +20,7 @@
   "dynamic-programming": "Dynamic Programming",
   "backtracking": "Backtracking",
   "graph": "Graph",
-  "stacks": "Stacks"
+  "stacks": "Stacks",
+  "KthLarget": "KthLargest"
+
 }
