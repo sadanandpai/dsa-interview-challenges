@@ -9,25 +9,25 @@
  * @return {number}
  */
 var diagonalSum = function (mat) {
-    const n = mat.length;
-    let diagonalSum = 0;
+  const n = mat.length;
+  let diagonalSum = 0;
 
-    // sum of diagonal from [0, 0] to [n-1, n-1]
-    for (let i = 0; i < n; i++) {
-        diagonalSum += mat[i][i];
-    }
+  // sum of diagonal from [0, 0] to [n-1, n-1]
+  for (let i = 0; i < n; i++) {
+    diagonalSum += mat[i][i];
+  }
 
-    // sum of diagonal from [0, n-1] to [n-1, 0]
-    for (let i = 0, j = n - 1; i < n; i++, j--) {
-        diagonalSum += mat[i][j];
-    }
+  // sum of diagonal from [0, n-1] to [n-1, 0]
+  for (let i = 0, j = n - 1; i < n; i++, j--) {
+    diagonalSum += mat[i][j];
+  }
 
-    // if n is odd, then subtract the central element
-    if (n % 2 === 1) {
-        diagonalSum -= mat[Math.floor(n / 2)][Math.floor(n / 2)];
-    }
+  // if n is odd, then subtract the central element
+  if (n % 2 === 1) {
+    diagonalSum -= mat[Math.floor(n / 2)][Math.floor(n / 2)];
+  }
 
-    return diagonalSum;
+  return diagonalSum;
 };
 ```
 

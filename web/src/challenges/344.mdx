@@ -9,14 +9,14 @@
  * @return {void} Do not return anything, modify the string in-place instead
  */
 var reverseString = function (s) {
-    const length = s.length;
+  const length = s.length;
 
-    for (let left = 0, right = length - 1; left < right; left++, right--) {
-        // swap the items between left and right
-        const temp = s[left];
-        s[left] = s[right];
-        s[right] = temp;
-    }
+  for (let left = 0, right = length - 1; left < right; left++, right--) {
+    // swap the items between left and right
+    const temp = s[left];
+    s[left] = s[right];
+    s[right] = temp;
+  }
 };
 ```
 

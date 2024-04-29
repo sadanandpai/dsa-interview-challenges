@@ -13,7 +13,6 @@ import C215 from "@/challenges/215.mdx";
 import C946 from "@/challenges/946.mdx";
 import C1572 from "@/challenges/1572.mdx";
 import C1752 from "@/challenges/1752.mdx";
-
 export const veryEasy = [C344, C1480, C1470, C509, C704];
 export const easy = [C35, C744, C118, C1752, C1572];
 export const medium = [C34, C153, C167, C946, C215];

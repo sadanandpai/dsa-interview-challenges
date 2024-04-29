@@ -10,26 +10,27 @@
  * @return {character}
  */
 var nextGreatestLetter = function (letters, target) {
-    let left = 0, right = letters.length - 1;
-    let ans = 0;
+  let left = 0,
+    right = letters.length - 1;
+  let ans = 0;
 
-    // if target is beyond the limits of letters
-    if (target < letters[0] || letters.at(-1) < target) {
-        return letters[ans];
-    }
-
-    while (left <= right) {
-        const mid = left + Math.floor((right - left) / 2);
-
-        if (target < letters[mid]) {
-            ans = mid;
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
-    }
-
+  // if target is beyond the limits of letters
+  if (target < letters[0] || letters.at(-1) < target) {
     return letters[ans];
+  }
+
+  while (left <= right) {
+    const mid = left + Math.floor((right - left) / 2);
+
+    if (target < letters[mid]) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return letters[ans];
 };
 ```
 

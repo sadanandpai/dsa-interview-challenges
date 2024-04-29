@@ -10,27 +10,29 @@
  * @return {number}
  */
 var searchInsert = function (nums, target) {
-    let low = 0, high = nums.length - 1;
-    let ans = nums.length;
+  let low = 0,
+    high = nums.length - 1;
+  let ans = nums.length;
 
-    if(target > nums.at(-1)){ // if target is greater than the last element
-        return ans;
-    }
-
-    while (low <= high) {
-        const mid = Math.floor((low + high) / 2); // obtain the mid value
-
-        if (nums[mid] === target) {
-            return mid;
-        } else if (nums[mid] >= target) {
-            ans = mid;
-            high = mid - 1;
-        } else {
-            low = mid + 1;
-        }
-    }
-
+  if (target > nums.at(-1)) {
+    // if target is greater than the last element
     return ans;
+  }
+
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2); // obtain the mid value
+
+    if (nums[mid] === target) {
+      return mid;
+    } else if (nums[mid] >= target) {
+      ans = mid;
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+
+  return ans;
 };
 ```
 

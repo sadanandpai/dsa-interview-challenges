@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export function Challenges({ challenges }: { challenges: any[] }) {
   return challenges.map((Challenge, idx) => (
