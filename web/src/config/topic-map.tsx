@@ -9,6 +9,7 @@ import C704 from "@/challenges/704.mdx";
 import C744 from "@/challenges/744.mdx";
 import C1470 from "@/challenges/1470.mdx";
 import C1480 from "@/challenges/1480.mdx";
+import C215 from "@/challenges/215.mdx";
 import C946 from "@/challenges/946.mdx";
 import C1572 from "@/challenges/1572.mdx";
 import C1752 from "@/challenges/1752.mdx";
@@ -18,4 +19,7 @@ export const string = [];
 export const binarySearch = [C704, C35, C744, C34, C153];
 export const dynamicProgramming = [C509, C118];
 export const twoPointers = [C344, C167];
-export const stack = [C946];
+export const stacks = [C946];
+export const KthLarget = [C215];
+
+
