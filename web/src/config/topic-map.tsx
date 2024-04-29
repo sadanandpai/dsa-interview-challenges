@@ -20,6 +20,6 @@ export const binarySearch = [C704, C35, C744, C34, C153];
 export const dynamicProgramming = [C509, C118];
 export const twoPointers = [C344, C167];
 export const stacks = [C946];
-export const KthLarget = [C215];
+export const kthLargest = [C215];
 
 
