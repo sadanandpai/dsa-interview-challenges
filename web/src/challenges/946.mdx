@@ -1,0 +1,45 @@
+import { Tabs } from 'nextra/components'
+
+### [Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/description/)
+
+- Create a stack and loop through the pushed elements
+-  If the element popped is encountered loop through the array popped and find the point where it is not equal
+
+<Tabs items={['Java']}>
+  <Tabs.Tab>
+    ```java copy
+      /**
+       * @param {int[] , int[]} pushed, popped
+       * @return {boolean}
+       */
+       public boolean validateStackSequences(int[] pushed, int[] popped) {
+      // start from pushed and check if it is in popped 
+      // just follow the instructions, if not encpuntered just return false 
+
+      int pop =0;
+      Stack<Integer> stack = new Stack<>();
+      for(int i=0; i<pushed.length ; i++) {
+              stack.add(pushed[i]);         
+              if(pushed[i]==popped[pop]) {
+                  for(int j=pop ; j<popped.length; j++) {
+                     if(!stack.isEmpty() &&  stack.peek()==popped[j]){
+                     pop++;
+                     stack.pop();
+                     } else {
+                         break;
+                     }
+                  }
+                  
+              } 
+          }
+     return stack.isEmpty();
+    }
+
+    ```
+  </Tabs.Tab>
+</Tabs>
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
