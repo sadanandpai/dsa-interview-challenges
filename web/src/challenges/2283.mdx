@@ -1,0 +1,53 @@
+### [Check if Number Has Equal Digit Count and Digit Value](https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value)
+
+### Understanding the `digitCount` Function
+
+The `digitCount` function is designed to evaluate whether a string representation of a number contains a count of each digit that matches the digit itself. It takes a single parameter `num`, which is
+expected to be a string. Here's a breakdown of how the function operates:
+
+1. **Initialization**: Inside the function, an array `numCount` is initialized with a length of 10, corresponding to the digits 0 through 9. Each element of this array is initialized to 0.
+
+2. **Counting Digits**: The function iterates through each character of the input string `num`. For each digit encountered, the corresponding index in the `numCount` array is incremented.
+
+3. **Comparing Counts**: After counting the occurrences of each digit, the function loops through the string `num` again. For each digit, it checks if the count of occurrences in `numCount` matches
+   the actual count of that digit in the string. If any disparity is found, indicating a mismatch between the digit count and the digit itself, the function returns `false`. Otherwise, it returns
+   `true` if all digits satisfy the condition.
+
+4. **Return Value**: The function returns `true` if all digits in the string match their counts, otherwise `false`.
+
+### Time Complexity:
+
+1. **Counting Digits**: The first loop iterates through each character of the input string `num`. Since this loop has a linear relationship with the length of the input string, its time complexity is O(n), where n is the length of the input string.
+
+2. **Comparing Counts**: The second loop also iterates through the string `num`. Again, its time complexity is O(n), where n is the length of the input string.
+
+Overall, the time complexity of the `digitCount` function is O(n), where n is the length of the input string. This linear time complexity indicates that the execution time of the function grows
+linearly with the size of the input.
+
+### Space Complexity:
+
+1. **Array Initialization**: The `numCount` array is initialized with a fixed size of 10, representing the counts of digits from 0 to 9. Therefore, the space required for this array is constant and does not depend on the size of the input string. Thus, the space complexity of this step is O(1).
+
+2. **Storing Counts**: The `numCount` array stores the count of occurrences for each digit. Since the array size is fixed (10 elements), the space required to store these counts is constant and independent of the input size. Hence, the space complexity for this step is also O(1).
+
+Overall, the space complexity of the `digitCount` function is O(1), indicating that the space required for its execution remains constant regardless of the size of the input string.
+
+In summary, the `digitCount` function exhibits efficient time and space complexities, making it suitable for processing numeric strings with minimal resource overhead.
+
+### Code
+
+```typescript
+function digitCount(num: string): boolean {
+  const numCount: number[] = new Array(10).fill(0);
+
+  for (const digit of num) {
+    numCount[digit]++;
+  }
+
+  for (let idx: number = 0; idx < num.length; idx++) {
+    if (numCount[idx] !== +num[idx]) return false;
+  }
+
+  return true;
+};
+```
