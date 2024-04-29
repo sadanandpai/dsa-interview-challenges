@@ -20,6 +20,15 @@ Go through [Usage Guide](./USAGE_GUIDE.md) before you start solving. You can als
 
 <br>
 
+### Running in Local
+
+- `https://github.com/sadanandpai/dsa-interview-challenges.git` Clone the repo
+- `cd dsa-interview-challenges/web/` Navigate to the web folder
+- `npm i` Install node dependencies
+- `npm run dev` Run the project
+
+<br>
+
 ### Contributing Guide
 
 If you want to contribute, improve or suggest changes to this repo, then check out the [Contributing Guide](./CONTRIBUTING.md)
