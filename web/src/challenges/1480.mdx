@@ -1,4 +1,4 @@
-import { Tabs } from 'nextra/components'
+import { Tabs } from 'nextra/components';
 
 ### [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
 
@@ -13,20 +13,20 @@ import { Tabs } from 'nextra/components'
        * @return {number[]}
        */
       var runningSum = function (nums) {
-          for (let i = 1; i < nums.length; i++) {
-              nums[i] += nums[i - 1];
-          }
-          return nums;
+        for (let i = 1; i < nums.length; i++) {
+          nums[i] += nums[i - 1];
+        }
+        return nums;
       };
     ```
   </Tabs.Tab>
   <Tabs.Tab>
     ```python copy
       class Solution:
-          def runningSum(self, nums: List[int]) -> List[int]:
-              for i in range(1, len(nums)):
-                  nums[i] += nums[i - 1]
-              return nums
+        def runningSum(self, nums: List[int]) -> List[int]:
+          for i in range(1, len(nums)):
+            nums[i] += nums[i - 1]
+          return nums
     ```
   </Tabs.Tab>
   <Tabs.Tab>
@@ -36,13 +36,14 @@ import { Tabs } from 'nextra/components'
        * @return {number[]}
        */
       public int[] runningSum(int[] nums) {
-          for (int i = 1; i < nums.length; i++) {
-              nums[i] += nums[i - 1];
-          }
-          return nums;
+        for (int i = 1; i < nums.length; i++) {
+          nums[i] += nums[i - 1];
+        }
+        return nums;
       }
 
     ```
+
   </Tabs.Tab>
 </Tabs>
 

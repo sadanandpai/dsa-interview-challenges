@@ -9,19 +9,19 @@
  * @return {boolean}
  */
 var check = function (nums) {
-    let unsortedCount = 0
+  let unsortedCount = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] > nums[(i + 1) % nums.length]) {
-            unsortedCount++;
-        }
-
-        if (unsortedCount > 1) {
-            return false;
-        }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > nums[(i + 1) % nums.length]) {
+      unsortedCount++;
     }
 
-    return true;
+    if (unsortedCount > 1) {
+      return false;
+    }
+  }
+
+  return true;
 };
 ```
 
