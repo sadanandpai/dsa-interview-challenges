@@ -9,9 +9,10 @@ import C704 from "@/challenges/704.mdx";
 import C744 from "@/challenges/744.mdx";
 import C1470 from "@/challenges/1470.mdx";
 import C1480 from "@/challenges/1480.mdx";
+import C1572 from "@/challenges/1572.mdx";
 import C1752 from "@/challenges/1752.mdx";
 
-export const array = [C1480, C1470, C1752];
+export const array = [C1480, C1470, C1752, C1572];
 export const string = [];
 export const binarySearch = [C704, C35, C744, C34, C153];
 export const dynamicProgramming = [C509, C118];
