@@ -13,14 +13,13 @@
   "string": "String",
   "binary-search": "Binary Search",
   "two-pointers": "Two Pointers",
-  "linked-list": "Linked List",
+  "stack": "Stack",
   "hash-table": "Hash Table",
+  "heap": "Heap",
+  "linked-list": "Linked List",
   "greedy": "Greedy",
   "tree": "Tree",
   "dynamic-programming": "Dynamic Programming",
   "backtracking": "Backtracking",
-  "graph": "Graph",
-  "stacks": "Stacks",
-  "KthLarget": "KthLargest"
-
+  "graph": "Graph"
 }
