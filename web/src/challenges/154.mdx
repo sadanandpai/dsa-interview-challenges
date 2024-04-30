@@ -1,7 +1,8 @@
-### [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+### [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 
 - Find which half is sorted and store the minimum value
 - Explore the unsorted half till completion
+- If left, mid, and right are the same, move the left and right pointers
 
 ```js copy
 /**
@@ -16,7 +17,11 @@ var findMin = function (nums) {
   while (left <= right) {
     const mid = left + Math.floor((right - left) / 2);
 
-    if (nums[left] <= nums[mid]) {
+    if (nums[left] === nums[mid] && nums[mid] === nums[right]) {
+      min = Math.min(min, nums[mid]);
+      left += 1;
+      right -= 1;
+    } else if (nums[left] <= nums[mid]) {
       min = Math.min(min, nums[left]);
       left = mid + 1;
     } else {

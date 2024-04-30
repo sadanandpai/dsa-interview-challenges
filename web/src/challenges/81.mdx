@@ -1,13 +1,14 @@
-### [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+### [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 - Find which half is sorted and check if the target is within the sorted half
 - If the target is within the sorted half, update the search range accordingly
+- If left, mid, and right are the same, move the left and right pointers
 
 ```js copy
 /**
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @return {boolean}
  */
 var search = function (nums, target) {
   let left = 0,
@@ -17,10 +18,13 @@ var search = function (nums, target) {
     const mid = left + Math.floor((right - left) / 2);
 
     if (nums[mid] === target) {
-      return mid;
+      return true;
     }
 
-    if (nums[left] <= nums[mid]) {
+    if (nums[left] === nums[mid] && nums[mid] === nums[right]) {
+      left += 1;
+      right -= 1;
+    } else if (nums[left] <= nums[mid]) {
       if (nums[left] <= target && target < nums[mid]) {
         right = mid - 1;
       } else {
@@ -35,11 +39,11 @@ var search = function (nums, target) {
     }
   }
 
-  return -1;
+  return false;
 };
 ```
 
 ##### Complexity
 
-- Time: O(log(n))
+- Time: O(n)
 - Space: O(1)

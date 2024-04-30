@@ -1,8 +1,10 @@
 import C33 from '@/challenges/33.mdx';
 import C34 from '@/challenges/34.mdx';
 import C35 from '@/challenges/35.mdx';
+import C81 from '@/challenges/81.mdx';
 import C118 from '@/challenges/118.mdx';
 import C153 from '@/challenges/153.mdx';
+import C154 from '@/challenges/154.mdx';
 import C167 from '@/challenges/167.mdx';
 import C215 from '@/challenges/215.mdx';
 import C344 from '@/challenges/344.mdx';
@@ -17,7 +19,7 @@ import C1752 from '@/challenges/1752.mdx';
 
 export const array = [C1480, C1470, C1752, C1572];
 export const string = [];
-export const binarySearch = [C704, C35, C744, C34, C153, C33];
+export const binarySearch = [C704, C35, C744, C34, C33, C153, C81, C154];
 export const twoPointers = [C344, C167];
 export const stack = [C946];
 export const heap = [C215];
