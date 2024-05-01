@@ -1,0 +1,62 @@
+### [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+
+-
+- Simpler and better approach would be to replace the current element by its sum with the previous element
+
+```js copy
+/**
+ * @param {number[]} bloomDay
+ * @param {number} m
+ * @param {number} k
+ * @return {number}
+ */
+var minDays = function (bloomDay, m, k) {
+  if (m * k > bloomDay.length) {
+    return -1;
+  }
+
+  let max = Math.max(...bloomDay); // max possible days
+  let left = 0, right = max, mid, ans;
+
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+    const bouquets = getBouquets(bloomDay, mid, m, k);
+
+    if (bouquets >= m) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return ans;
+};
+
+function getBouquets(bloomDay, mid, m, k) {
+  let bouquets = 0, flowers = 0;
+  
+  for (let i = 0; i < bloomDay.length; i++) {
+    // add flowers to bouquet if bloomed or reset
+    flowers = bloomDay[i] <= mid ? flowers + 1 : 0
+
+    // if enough flowers in a bouquet
+    if (flowers === k) {
+      bouquets += 1;
+      flowers = 0;
+    }
+
+    // if enough bouquets
+    if (bouquets === m) {
+      break;
+    }
+  }
+
+  return bouquets;
+}
+```
+
+##### Complexity
+
+- Time: O(n log(Max(days)))
+- Space: O(1)

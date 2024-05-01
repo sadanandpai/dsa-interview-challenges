@@ -9,9 +9,7 @@
  * @return {number}
  */
 var findMin = function (nums) {
-  let left = 0,
-    right = nums.length - 1;
-  let min = Infinity;
+  let left = 0, right = nums.length - 1, min = Infinity;
 
   while (left <= right) {
     const mid = left + Math.floor((right - left) / 2);
