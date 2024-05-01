@@ -1,0 +1,38 @@
+### [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+
+- Use binary search to find if mid is a peak. If mid is not a peak, move towards the direction of the greater element
+- If mid ends at the first or last element, consider it as a peak
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findPeakElement = function (nums) {
+  let left = 0, right = nums.length - 1, mid;
+
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+
+    if (nums[mid - 1] < nums[mid] && nums[mid] > nums[mid + 1]) {
+      return mid;
+    }
+
+    if (nums[mid - 1] > nums[mid]) {
+      right = mid - 1;
+    } else if (nums[mid] < nums[mid + 1]) {
+      left = mid + 1;
+    } else {
+      // edge case where mid is the first/last element
+      return mid;
+    }
+  }
+
+  return mid;
+};
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)

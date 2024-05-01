@@ -1,0 +1,33 @@
+### [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
+
+- Use binary search technique to with a range from 0 to x
+- Use the mid value to check if mid * mid is less than or equal to x
+
+```js copy
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function (x) {
+  let left = 0, right = x, mid, ans;
+
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+    const square = mid * mid;
+
+    if (square <= x) {
+      ans = mid;
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return ans;
+};
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)

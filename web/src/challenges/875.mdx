@@ -1,0 +1,35 @@
+### [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+
+- Use binary search to find if mid is a peak. If mid is not a peak, move towards the direction of the greater element
+- If mid ends at the first or last element, consider it as a peak
+
+```js copy
+/**
+ * @param {number[]} piles
+ * @param {number} h
+ * @return {number}
+ */
+var minEatingSpeed = function (piles, h) {
+  let max = Math.max(...piles); // max possible count of bananas eaten per hour
+  let left = 0, right = max, mid, ans;
+
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+    const time = piles.reduce((acc, bananas) => acc + Math.ceil(bananas / mid), 0);
+
+    if (time <= h) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return ans;
+};
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)

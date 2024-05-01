@@ -10,8 +10,7 @@
  * @return {number}
  */
 var searchInsert = function (nums, target) {
-  let low = 0,
-    high = nums.length - 1;
+  let left = 0, right = nums.length - 1;
   let ans = nums.length;
 
   if (target > nums.at(-1)) {
@@ -19,16 +18,16 @@ var searchInsert = function (nums, target) {
     return ans;
   }
 
-  while (low <= high) {
-    const mid = Math.floor((low + high) / 2); // obtain the mid value
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2); // obtain the mid value
 
     if (nums[mid] === target) {
       return mid;
     } else if (nums[mid] >= target) {
       ans = mid;
-      high = mid - 1;
+      right = mid - 1;
     } else {
-      low = mid + 1;
+      left = mid + 1;
     }
   }
 
