@@ -1,0 +1,43 @@
+### [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)
+
+- Use binary search to find the divisor if it satisfies the threshold
+- If sum is mo than threshold, move towards the right else move towards the left
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @param {number} threshold
+ * @return {number}
+ */
+var smallestDivisor = function (nums, threshold) {
+  const max = Math.max(...nums);
+  let left = 1, right = max, mid, ans;
+
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+    const sum = divisorSum(nums, mid);
+
+    if (sum <= threshold) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return ans;
+};
+
+function divisorSum(nums, div) {
+  let sum = 0;
+  for (const val of nums) {
+    sum += Math.ceil(val / div);
+  }
+  return sum;
+}
+```
+
+##### Complexity
+
+- Time: O(n log(Max(nums)))
+- Space: O(1)

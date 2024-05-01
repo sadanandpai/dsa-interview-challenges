@@ -1,0 +1,64 @@
+### [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+
+- Use binary search to find the capacity with min & max as the max weight & total weight respectively
+- If the days to ship is less than or equal to the given days, move towards the left else move towards the right
+
+
+```js copy
+/**
+ * @param {number[]} weights
+ * @param {number} days
+ * @return {number}
+ */
+var shipWithinDays = function (weights, days) {
+  const [totalWeight, maxWeight] = getTotalAndMax(weights);
+  let left = maxWeight, right = totalWeight;
+  let ans = totalWeight;
+
+  while (left <= right) {
+    const mid = left + Math.floor((right - left) / 2);
+    const daysToShip = getDaysToShip(weights, mid);
+
+    if (daysToShip <= days) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return ans;
+};
+
+function getTotalAndMax(arr) {
+  let sum = 0, max = 0;
+
+  for (const item of arr) {
+    sum += item;
+    if (max < item) {
+      max = item;
+    }
+  }
+
+  return [sum, max];
+}
+
+function getDaysToShip(weights, shipCapacity) {
+  let days = 1, capacity = 0;
+  for (const weight of weights) {
+    if (capacity + weight > shipCapacity) {
+      days += 1;
+      capacity = 0;
+    }
+
+    capacity += weight;
+  }
+
+  return days;
+}
+```
+
+##### Complexity
+
+- Time: O(n log(Max(weights)))
+- Space: O(1)
