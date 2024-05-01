@@ -17,10 +17,10 @@ var minDays = function (bloomDay, m, k) {
   }
 
   let max = Math.max(...bloomDay); // max possible days
-  let left = 0, right = max, mid, ans;
+  let left = 0, right = max, ans;
 
   while (left <= right) {
-    mid = left + Math.floor((right - left) / 2);
+    const mid = left + Math.floor((right - left) / 2);
     const bouquets = getBouquets(bloomDay, mid, m, k);
 
     if (bouquets >= m) {

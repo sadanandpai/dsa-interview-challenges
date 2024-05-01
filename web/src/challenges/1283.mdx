@@ -11,10 +11,10 @@
  */
 var smallestDivisor = function (nums, threshold) {
   const max = Math.max(...nums);
-  let left = 1, right = max, mid, ans;
+  let left = 1, right = max, ans;
 
   while (left <= right) {
-    mid = left + Math.floor((right - left) / 2);
+    const mid = left + Math.floor((right - left) / 2);
     const sum = divisorSum(nums, mid);
 
     if (sum <= threshold) {

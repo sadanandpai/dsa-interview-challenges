@@ -12,10 +12,10 @@
  */
 var minEatingSpeed = function (piles, h) {
   let max = Math.max(...piles); // max possible count of bananas eaten per hour
-  let left = 0, right = max, mid, ans;
+  let left = 0, right = max, ans;
 
   while (left <= right) {
-    mid = left + Math.floor((right - left) / 2);
+    const mid = left + Math.floor((right - left) / 2);
     const time = piles.reduce((acc, bananas) => acc + Math.ceil(bananas / mid), 0);
 
     if (time <= h) {

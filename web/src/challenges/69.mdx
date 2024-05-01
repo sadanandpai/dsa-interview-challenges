@@ -9,10 +9,10 @@
  * @return {number}
  */
 var mySqrt = function (x) {
-  let left = 0, right = x, mid, ans;
+  let left = 0, right = x, ans;
 
   while (left <= right) {
-    mid = left + Math.floor((right - left) / 2);
+    const mid = left + Math.floor((right - left) / 2);
     const square = mid * mid;
 
     if (square <= x) {
