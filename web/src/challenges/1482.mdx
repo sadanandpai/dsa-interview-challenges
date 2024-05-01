@@ -1,7 +1,8 @@
 ### [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)
 
--
-- Simpler and better approach would be to replace the current element by its sum with the previous element
+- Use binary search to find the if mid is the days to make m bouquets
+- If bouquets are greater than or equal to m, update the answer and move towards the left
+- If bouquets are less than m, move towards the right
 
 ```js copy
 /**

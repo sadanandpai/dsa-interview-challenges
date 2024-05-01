@@ -1,7 +1,8 @@
 ### [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 
-- Use binary search to find if mid is a peak. If mid is not a peak, move towards the direction of the greater element
-- If mid ends at the first or last element, consider it as a peak
+- Use binary search to find the if mid is the minimum eating time
+- If time is less than or equal to h, update the answer and move towards the left
+- If time is greater than h, move towards the right
 
 ```js copy
 /**
