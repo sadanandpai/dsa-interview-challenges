@@ -1,0 +1,61 @@
+### [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/description/)
+
+- Using binary search, set the left as 1 and right as the maximum distance between the balls
+- Check if the placements are possible with the given distance and continue till you find the maximum distance
+- Popularly known as the [Aggressive Cows](https://www.spoj.com/problems/AGGRCOW/) problem
+
+```js copy
+/**
+ * @param {number[]} position
+ * @param {number} m
+ * @return {number}
+ */
+var maxDistance = function (positions, m) {
+  positions.sort((a, b) => a - b);
+  let left = 1, right = positions.at(-1) - positions.at(0);
+
+  // placed in the 2 extreme end of the array
+  if (m === 2) {
+    return right;
+  }
+
+  let ans;
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    const isPossible = checkPlacements(positions, m, mid);
+
+    if (isPossible) {
+      ans = mid;
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return ans;
+};
+
+function checkPlacements(arr, m, distance) {
+  let prev = arr[0], count = 1;
+
+  for (let i = 1; i < arr.length; i++) {
+    // if the gap is maintained
+    if (arr[i] - prev >= distance) {
+      count += 1;
+      prev = arr[i];
+    }
+
+    // if placements are complete
+    if (count === m) {
+      return true;
+    }
+  }
+
+  return false;
+}
+```
+
+##### Complexity
+
+- Time: O(n log(n))
+- Space: O(1)

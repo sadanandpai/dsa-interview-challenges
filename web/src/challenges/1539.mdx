@@ -1,6 +1,6 @@
-### [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/description/)
+### [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)
 
-- Find the index of the lower bound of the missing number using binary search.
+- Find the index of the lower bound of the missing number using binary search
 - Return the missing number by adding the k to the index
 
 ```js copy
@@ -17,6 +17,7 @@ var findKthPositive = function (arr, k) {
     const mid = left + Math.floor((right - left) / 2);
     const missingCount = arr[mid] - (mid + 1);
 
+    // find smallest index of missing number greater than k
     if (k <= missingCount) {
       ans = mid;
       right = mid - 1;
@@ -25,7 +26,7 @@ var findKthPositive = function (arr, k) {
     }
   }
 
-  return ans + k;
+  return ans + k; // arr[ans] + k - (arr[ans] - (ans + 1)) = kth missing number
 };
 ```
 
