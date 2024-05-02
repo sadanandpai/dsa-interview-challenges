@@ -1,0 +1,33 @@
+### [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square)
+
+- Naive approach would be start half the number now multiply each number by itself and check if it match with target
+- As the array is already sorted Binary search can be modified to reduce the time complexity
+
+```js copy
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+var searchInsert = function (num) {
+  if (num == 1) return true;
+  let right = Math.floor(num / 2),
+    left = 0;
+  while (left <= right) {
+    let mid = left + Math.floor((right - left) / 2);
+    if (mid * mid == num) {
+      return true;
+    }
+    if (mid * mid < num) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return false;
+};
+```
+
+##### Complexity
+
+- Time: O(log(n))
+- Space: O(1)
