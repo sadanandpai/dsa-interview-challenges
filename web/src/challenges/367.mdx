@@ -10,13 +10,16 @@
  */
 var searchInsert = function (num) {
   if (num == 1) return true;
-  let right = Math.floor(num / 2),
-    left = 0;
+
+  let left = 0, right = Math.floor(num / 2);
+
   while (left <= right) {
-    let mid = left + Math.floor((right - left) / 2);
-    if (mid * mid == num) {
+    const mid = left + Math.floor((right - left) / 2);
+
+    if (mid * mid === num) {
       return true;
     }
+
     if (mid * mid < num) {
       left = mid + 1;
     } else {
