@@ -1,0 +1,72 @@
+### [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)
+
+- Use binary searach with min & max as max & sum of the array
+- Check if the sum can be split into k subarrays for mid value
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var splitArray = function (nums, k) {
+  const [sum, max] = getTotalAndMax(nums);
+  if (k === nums.length) {
+    return max;
+  }
+
+  if (k === 1) {
+    return sum;
+  }
+
+  let left = max, right = sum, ans = 0;
+  while (left <= right) {
+    const mid = left + Math.floor((right - left) / 2);
+    const canFit = checkFitment(nums, k, mid);
+
+    if (canFit) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return ans;
+};
+
+function checkFitment(nums, k, limit) {
+  let sum = 0, count = 1;
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    if (sum > limit) {
+      count += 1;
+      sum = nums[i];
+
+      if (count > k) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+function getTotalAndMax(arr) {
+  let sum = 0, max = 0;
+
+  for (const item of arr) {
+    sum += item;
+    if (max < item) {
+      max = item;
+    }
+  }
+
+  return [sum, max];
+}
+```
+
+##### Complexity
+
+- Time: O(n log(sum - max))
+- Space: O(1)
