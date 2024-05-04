@@ -29,8 +29,9 @@ import C774 from '@/challenges/774.mdx';
 import C81 from '@/challenges/81.mdx';
 import C875 from '@/challenges/875.mdx';
 import C946 from '@/challenges/946.mdx';
+import C1662 from '@/challenges/1662.mdx';
 
-export const veryEasy = [C344, C1480, C1470, C509, C704];
+export const veryEasy = [C344, C1480, C1470, C509, C704, C1662];
 export const easy = [C367, C35, C744, C69, C118, C1752, C1572, C2283];
 export const medium = [C34, C33, C153, C81, C154, C162, C1539, C167, C875, C946, C215, C1482, C1283, C1011, C1552];
 export const hard = [C410, C774, C2009];

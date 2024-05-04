@@ -1,0 +1,27 @@
+### [Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
+
+- Having 2 array, convert array into string, with one by one check if every character matches return true else false
+
+```js copy
+/**
+ * @param {string[],string[]} nums
+ * @return {boolean}
+ */
+const stringComparison = (word1, word2) => {
+  let word1String = word1.join('');
+  let word2String = word2.join('');
+  if (word1String?.length != word2String?.length) return false;
+
+  for (let i = 0; i < word1String?.length; i++) {
+    if (word1String[i] != word2String[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
