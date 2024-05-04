@@ -8,10 +8,11 @@
  * @param {number} num
  * @return {boolean}
  */
-var searchInsert = function (num) {
+var validPerfectSquare = function (num) {
   if (num == 1) return true;
 
-  let left = 0, right = Math.floor(num / 2);
+  let left = 0,
+    right = Math.floor(num / 2);
 
   while (left <= right) {
     const mid = left + Math.floor((right - left) / 2);
