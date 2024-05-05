@@ -22,6 +22,7 @@ import C189 from '@/challenges/189.mdx';
 import C1929 from '@/challenges/1929.mdx';
 import C2009 from '@/challenges/2009.mdx';
 import C215 from '@/challenges/215.mdx';
+import C2009 from '@/challenges/2009.mdx';
 import C2283 from '@/challenges/2283.mdx';
 import C26 from '@/challenges/26.mdx';
 import C268 from '@/challenges/268.mdx';
