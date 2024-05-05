@@ -1,0 +1,28 @@
+### [Sum of Unique Elements](https://leetcode.com/problems/sum-of-unique-elements/)
+
+- This is basically calculating the frequency of each element and sum up the unique elements (having frequency 1)
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var sumOfUnique = function (nums) {
+  let arr = [],
+    sum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    arr[nums[i]] = (arr[nums[i]] || 0) + 1;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
+      sum += i;
+    }
+  }
+  return sum;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
