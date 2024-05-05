@@ -1,0 +1,47 @@
+### [Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/)
+
+- For a binary search, use left as minimum distance possible and right as maximum distance possible
+- For each distance, check if it is possible to add `k` stations with gap less than or equal to the distance
+
+```js copy
+/**
+ * @param {number[]} stations
+ * @param {number} k
+ * @return {number}
+ */
+var minmaxGasDist = function (stations, k) {
+  let left = 1e-6, right = stations.at(-1) - stations.at(0);
+
+  while (right - left > 1e-6) {
+    const mid = left + (right - left) / 2;
+    const canFit = checkEligibleGap(stations, k, mid);
+
+    if (canFit) {
+      right = mid;
+    } else {
+      left = mid;
+    }
+  }
+
+  return left;
+};
+
+function checkEligibleGap(stations, k, gap) {
+  let newStations = 0;
+
+  for (let i = 0; i < stations.length - 1; i++) {
+    newStations += Math.ceil((stations[i + 1] - stations[i]) / gap) - 1;
+
+    if (newStations > k) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+##### Complexity
+
+- Time: O(n \* log(W)) where W is the range of the answer
+- Space: O(1)

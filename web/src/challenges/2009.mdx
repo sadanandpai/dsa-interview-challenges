@@ -1,0 +1,56 @@
+### [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/)
+
+- Sort the given nums array by removing duplicates
+- Consider each element as the first element & find the number of elements that can be included in the subarray till the last
+- Consider the rest of the elements count as number of operations required
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var minOperations = function (nums) {
+  const uniqNums = [...new Set(nums)].sort((a, b) => a - b);
+
+  // check if already continuous
+  if (uniqNums.at(-1) - uniqNums[0] === 1) {
+    return 0;
+  }
+
+  let minOps = nums.length;
+  for (let idx = 0; idx < uniqNums.length; idx++) {
+    const first = uniqNums[idx];
+    const last = first + nums.length - 1; // last element to make it continuous
+
+    const lastIdx = getUpperBound(uniqNums, last);
+    const sortedCount = lastIdx - idx; // number of elements that are already present to make it continuous
+    const ops = nums.length - sortedCount; // number of elements that need to be replaced
+
+    minOps = Math.min(minOps, ops);
+  }
+
+  return minOps;
+};
+
+function getUpperBound(arr, k) {
+  let left = 0, right = arr.length, ans = arr.length;
+
+  while (left <= right) {
+    const mid = left + Math.floor((right - left) / 2);
+
+    if (k < arr[mid]) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return ans;
+}
+```
+
+##### Complexity
+
+- Time: O(n log(n))
+- Space: O(n)
