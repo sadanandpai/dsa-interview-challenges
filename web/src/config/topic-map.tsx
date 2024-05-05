@@ -29,9 +29,10 @@ import C774 from '@/challenges/774.mdx';
 import C81 from '@/challenges/81.mdx';
 import C875 from '@/challenges/875.mdx';
 import C946 from '@/challenges/946.mdx';
+import C1662 from '@/challenges/1662.mdx';
 
 export const array = [C1480, C1470, C1752, C1572, C2283];
-export const string = [];
+export const string = [C1662];
 export const binarySearch = [C704, C367, C35, C744, C69, C34, C33, C153, C81, C154, C162, C1539, C875, C1482, C1283, C1011, C1552, C410, C774, C2009];
 export const twoPointers = [C344, C167];
 export const stack = [C946];
