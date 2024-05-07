@@ -1,0 +1,34 @@
+### [Making File Names Unique](https://leetcode.com/problems/making-file-names-unique/)
+
+- Save all the file names in a map with their frequency & if a file name is already present, append a number to it
+- Continue until a unique file name is found and update the map with the new file name as well and its frequency
+
+```js copy
+/**
+ * @param {string[]} names
+ * @return {string[]}
+ */
+var getFolderNames = function (names) {
+  const freq = new Map();
+
+  for (let i = 0; i < names.length; i++) {
+    let key = names[i];
+    let count = freq.get(key) ?? 0;
+
+    while (freq.has(key)) {
+      key = names[i] + `(${++count})`;
+    }
+
+    freq.set(key, 0);
+    freq.set(names[i], count);
+    names[i] = key;
+  }
+
+  return names;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)

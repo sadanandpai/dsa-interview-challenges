@@ -1,0 +1,45 @@
+### [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
+
+- Start from left of the array, if the asteroid is positive, push it to the stack
+- If the asteroid is negative, keep popping from the stack until the stack is empty or the top of the stack is positive
+
+```js copy
+/**
+ * @param {number[]} asteroids
+ * @return {number[]}
+ */
+var asteroidCollision = function (asteroids) {
+  const left = [], right = [];
+
+  for (const asteroid of asteroids) {
+    // when a right moving asteroid comes
+    if (asteroid > 0) {
+      left.push(asteroid);
+      continue;
+    }
+
+    // when left moving asteroid destroys the possible right moving asteroids
+    while (left.length && left.at(-1) < -asteroid) {
+      left.pop();
+    }
+
+    // for the remaining right moving asteroid (may be equal or greater than the left moving destroyer)
+    if (left.length) {
+      if (left.at(-1) === -asteroid) {
+        left.pop();
+      }
+      continue;
+    }
+
+    // if left moving asteroid wins
+    right.push(asteroid);
+  }
+
+  return right.concat(left);
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)

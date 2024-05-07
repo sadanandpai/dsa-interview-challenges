@@ -10,7 +10,7 @@
  * @return {number}
  */
 var minmaxGasDist = function (stations, k) {
-  let left = 1e-6, right = stations.at(-1) - stations.at(0);
+  let left = 0, right = stations.at(-1) - stations.at(0);
 
   while (right - left > 1e-6) {
     const mid = left + (right - left) / 2;
@@ -43,5 +43,5 @@ function checkEligibleGap(stations, k, gap) {
 
 ##### Complexity
 
-- Time: O(n \* log(W)) where W is the range of the answer
+- Time: O(n log(W)) where W is the range of the answer
 - Space: O(1)
