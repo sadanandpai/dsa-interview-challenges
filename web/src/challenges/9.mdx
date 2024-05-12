@@ -1,0 +1,31 @@
+### [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+
+- Build a number starting with the last digit of the input number using modulo and division
+- Compare the reversed number with the input number
+
+```js copy
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function (x) {
+  if (x < 0) {
+    // if negative number
+    return false;
+  }
+
+  let reverse = 0, value = x;
+  while (value > 0) {
+    const remainder = value % 10; // get the last digit
+    reverse = remainder + reverse * 10; // build the reversed number
+    value = Math.floor(value / 10); // remove the last digit
+  }
+
+  return reverse === x;
+};
+```
+
+##### Complexity
+
+- Time: O(digits)
+- Space: O(1)

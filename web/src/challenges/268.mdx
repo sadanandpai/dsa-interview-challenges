@@ -1,0 +1,28 @@
+### [Missing Number](https://leetcode.com/problems/missing-number/)
+
+- The total of the first n natural numbers is `n * (n + 1) / 2`
+- The difference between the sum of the input array and the total should be the missing number
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function (nums) {
+  const n = nums.length;
+
+  var total = (n * (n + 1)) / 2;
+  var sum = 0;
+
+  for (var i = 0; i < n; i++) {
+    sum = sum + nums[i];
+  }
+
+  return total - sum;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

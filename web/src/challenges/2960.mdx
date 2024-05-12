@@ -1,0 +1,27 @@
+### [Count Tested Devices After Test Operations](https://leetcode.com/problems/count-tested-devices-after-test-operations/)
+
+- Keep track of the number of devices that have been tested
+- Increment the count if the battery percentage is greater than the current count
+
+```js copy
+/**
+ * @param {number[]} batteryPercentages
+ * @return {number}
+ */
+var countTestedDevices = function (batteryPercentages) {
+  let count = 0;
+
+  for (let i = 0; i < batteryPercentages.length; i++) {
+    if (batteryPercentages[i] > count) {
+      count++;
+    }
+  }
+
+  return count;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

@@ -1,0 +1,29 @@
+### [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)
+
+- Create a new array to hold the concatenated array
+- Loop through the input array and push each element to the new array twice
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var getConcatenation = function (nums) {
+  const concatNums = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    concatNums.push(nums[i]);
+  }
+
+  for (let i = 0; i < nums.length; i++) {
+    concatNums.push(nums[i]);
+  }
+
+  return concatNums;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)

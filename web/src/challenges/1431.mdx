@@ -1,0 +1,33 @@
+### [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)
+
+- Find the kid with the most candies & check if each kid can have the most candies by adding extra candies
+- Max can also be easily found using `Math.max(...candies)`
+
+```js copy
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function (candies, extraCandies) {
+  // find the kid with the most candies
+  let max = 0;
+  for (let i = 0; i < candies.length; i++) {
+    if (max < candies[i]) {
+      max = candies[i];
+    }
+  }
+
+  // check if each kid can have the most candies
+  for (let i = 0; i < candies.length; i++) {
+    candies[i] = candies[i] + extraCandies >= max;
+  }
+
+  return candies;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)

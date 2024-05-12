@@ -11,6 +11,7 @@
   },
   "array": "Array",
   "string": "String",
+  "math": "Math",
   "binary-search": "Binary Search",
   "two-pointers": "Two Pointers",
   "stack": "Stack",

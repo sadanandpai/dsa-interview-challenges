@@ -1,0 +1,19 @@
+### [Single Number](https://leetcode.com/problems/single-number/)
+
+- Perform bitwise XOR on all elements in the array
+- The XOR operation will cancel out all duplicate numbers, leaving the single number
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function (nums) {
+  return nums.reduce((x, y) => x ^ y);
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

@@ -1,0 +1,38 @@
+### [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+- Reverse the number without sign and check for overflow
+- Use the sign to return the reversed number with the correct sign
+
+```js copy
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function (x) {
+  const limit = Math.pow(2, 31);
+  const isPositive = x > 0;
+
+  let value = Math.abs(x); // remove the sign
+  let reverse = 0;
+  while (value > 0) {
+    const remainder = value % 10;
+    value = Math.floor(value / 10);
+    reverse = remainder + 10 * reverse;
+  }
+
+  // check for overflow
+  if (isPositive && reverse >= limit) {
+    return 0;
+  } else if (!isPositive && reverse > limit) {
+    return 0;
+  }
+
+  // return the reversed number with the correct sign
+  return isPositive ? reverse : -reverse;
+};
+```
+
+##### Complexity
+
+- Time: O(digits)
+- Space: O(1)

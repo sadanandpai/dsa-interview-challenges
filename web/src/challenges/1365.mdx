@@ -1,0 +1,43 @@
+### [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
+
+- Build a count array to store the frequency of each number
+- Calculate the number of elements lesser than the current number
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var smallerNumbersThanCurrent = function (nums) {
+  const length = nums.length;
+  const limit = 100;
+  let countArray = new Array(limit + 1).fill(0);
+
+  // build the count array
+  for (let i = 0; i < length; i++) {
+    countArray[nums[i]]++;
+  }
+
+  // calculate the number of elements lesser than the current number in one pass
+  let prevCount = 0;
+  for (let i = 0; i <= limit; i++) {
+    if (countArray[i]) {
+      const currentCount = countArray[i];
+      countArray[i] = prevCount;
+      prevCount += currentCount;
+    }
+  }
+
+  const smallerArray = [];
+  for (let i = 0; i < length; i++) {
+    smallerArray.push(countArray[nums[i]]);
+  }
+
+  return smallerArray;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
