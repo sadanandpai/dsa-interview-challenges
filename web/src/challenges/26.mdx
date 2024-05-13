@@ -1,0 +1,29 @@
+### [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
+- Use 2 pointers to keep track of the current and next unique element
+- Iterate through the array and update the next unique element when a new unique element is found
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+  let pointer = -1;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[pointer] !== nums[i]) {
+      // Found a new unique element
+      pointer++;
+      nums[pointer] = nums[i];
+    }
+  }
+
+  return pointer + 1; // Return the length of the unique elements
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

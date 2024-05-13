@@ -1,0 +1,35 @@
+### [Score After Flipping Matrix](https://leetcode.com/problems/score-after-flipping-matrix/)
+
+- Flip each row if it has more 0 in the first column (MSB will give the maximum value)
+- For each column, maximize the number of 1s by flipping the column if it has more 0s than 1s
+
+```js copy
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var matrixScore = function (grid) {
+  const m = grid.length, n = grid[0].length;
+  let sum = (1 << (n - 1)) * m; // Set the MSB to 1 for each row
+
+  for (let j = 1; j < n; j++) {
+    // Count the number of 1s in the column
+    let count = 0;
+
+    for (let i = 0; i < m; i++) {
+      // Flip the column if that row MSB was flipped
+      count += grid[i][0] ? grid[i][j] : 1 - grid[i][j];
+    }
+
+    // Flip the column if it has more 0s than 1s
+    sum += (1 << (n - 1 - j)) * Math.max(count, m - count);
+  }
+
+  return sum;
+};
+```
+
+##### Complexity
+
+- Time: O(m \* n)
+- Space: O(1)
