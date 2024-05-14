@@ -1,0 +1,30 @@
+### [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
+
+- Use a counter to keep track of the number of consecutive ones
+- Update the maximum count when a zero is encountered
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMaxConsecutiveOnes = function (nums) {
+  let count = 0, max = 0;
+
+  for (const num of nums) {
+    if (num) {
+      count++;
+    } else {
+      max = Math.max(max, count);
+      count = 0;
+    }
+  }
+
+  return Math.max(max, count); // Edge case when the array ends with 1
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

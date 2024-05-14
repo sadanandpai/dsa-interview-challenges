@@ -1,4 +1,4 @@
-### [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/description/)
+### [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/)
 
 - Using binary search, set the left as 1 and right as the maximum distance between the balls
 - Check if the placements are possible with the given distance and continue till you find the maximum distance
@@ -12,7 +12,8 @@
  */
 var maxDistance = function (positions, m) {
   positions.sort((a, b) => a - b);
-  let left = 1, right = positions.at(-1) - positions.at(0);
+  let left = 1,
+    right = positions.at(-1) - positions.at(0);
 
   // placed in the 2 extreme end of the array
   if (m === 2) {
@@ -36,7 +37,8 @@ var maxDistance = function (positions, m) {
 };
 
 function checkPlacements(arr, m, distance) {
-  let prev = arr[0], count = 1;
+  let prev = arr[0],
+    count = 1;
 
   for (let i = 1; i < arr.length; i++) {
     // if the gap is maintained

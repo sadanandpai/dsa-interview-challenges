@@ -1,43 +1,31 @@
-import { Tabs } from 'nextra/components';
+### [ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
-### [ Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+- Use PriorityQueue to save all the values in as a max heap
+- Dequeue k times to get the kth largest element
 
-- Use PriorityQueue to save all the values in ascending
-- Poll the values till Kth Value is encountered
+```js copy
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findKthLargest = function (nums, k) {
+  const maxPQ = new MaxPriorityQueue();
 
-<Tabs items={['Java']}>
-  <Tabs.Tab>
-    ```java copy
-      /**
-       * @param {int[] , int} nums, k
-       * @return {boolean}
-       */
-      public int findKthLargest(int[] nums, int k) {
-          PriorityQueue<Integer> pq = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
+  for (const num of nums) {
+    maxPQ.enqueue(num, num);
+  }
 
-          // add all the values from nums to PQ
-          for(int i : nums) {
-              pq.add(i);
-          }
+  while (k > 1) {
+    maxPQ.dequeue();
+    k--;
+  }
 
-          // poll till the value of a is equal to 0
-          int a=nums.length-k;
-          while(!pq.isEmpty()) {
-              if(a==0) {
-                  // return when the condition is met
-                  return pq.poll();
-              }
-              a--;
-              pq.poll();
-          }
-          return 0;
-      }
-    ```
-
-  </Tabs.Tab>
-</Tabs>
+  return maxPQ.front().element;
+};
+```
 
 ##### Complexity
 
-- Time: O(log(n))
+- Time: O(n \* log(n))
 - Space: O(n)

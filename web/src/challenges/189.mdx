@@ -1,0 +1,37 @@
+### [Rotate Array](https://leetcode.com/problems/rotate-array/)
+
+- Reverse the entire array to get the correct order of the elements
+- Reverse the first `k` elements and the remaining elements separately
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var rotate = function (nums, k) {
+  k = k % nums.length;
+
+  nums.reverse();
+  reverse(nums, 0, k - 1);
+  reverse(nums, k, nums.length - 1);
+  return nums;
+};
+
+function reverse(nums, start, end) {
+  while (start < end) {
+    // Swap the start and end elements
+    const temp = nums[start];
+    nums[start] = nums[end];
+    nums[end] = temp;
+
+    start++;
+    end--;
+  }
+}
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)

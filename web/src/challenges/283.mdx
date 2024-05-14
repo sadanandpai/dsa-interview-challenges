@@ -1,0 +1,32 @@
+### [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+
+- Move all non-zero elements to the front of the array
+- Fill the remaining elements with zeros
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function (nums) {
+  let pointer = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i]) {
+      nums[pointer] = nums[i];
+      pointer++;
+    }
+  }
+
+  for (let i = pointer; i < nums.length; i++) {
+    nums[i] = 0;
+  }
+
+  return nums;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
