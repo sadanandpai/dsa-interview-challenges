@@ -46,6 +46,7 @@ import C861 from '@/challenges/861.mdx';
 import C875 from '@/challenges/875.mdx';
 import C9 from '@/challenges/9.mdx';
 import C946 from '@/challenges/946.mdx';
+import C594 from '@/challenges/594.mdx';
 
 export const math = [C9, C7];
 export const array = [C268, C1929, C136, C1431, C2960, C1365, C1480, C1470, C1752, C1572, C2283, C1748, C485, C283, C189];
@@ -58,3 +59,4 @@ export const linkedList = [];
 export const greedy = [C861];
 export const heap = [C215];
 export const dynamicProgramming = [C509, C118];
+export const slidingWindow = [C594];
