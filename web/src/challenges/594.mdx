@@ -1,0 +1,29 @@
+### [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
+
+- Find the frequency of each element
+- if map[key - 1] exist, then calculate max from maxLength,map previousvalue and current value
+
+```js copy
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findLHS = function (nums) {
+  let map = {};
+  for (let i of nums) {
+    map[i] = (map[i] || 0) + 1;
+  }
+  let maxResultLength = 0;
+  for (let [key, value] of Object.entries(map)) {
+    if (map[key - 1]) {
+      maxResultLength = Math.max(maxResultLength, map[key - 1] + value);
+    }
+  }
+  return maxResultLength;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
