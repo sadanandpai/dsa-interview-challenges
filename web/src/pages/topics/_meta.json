@@ -13,6 +13,7 @@
   "string": "String",
   "math": "Math",
   "binary-search": "Binary Search",
+  "sliding-window": "Sliding Window",
   "two-pointers": "Two Pointers",
   "stack": "Stack",
   "hash-table": "Hash Table",
