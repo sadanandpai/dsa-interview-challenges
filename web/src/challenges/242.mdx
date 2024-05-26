@@ -1,0 +1,37 @@
+### [Valid Anagram](https://leetcode.com/problems/valid-anagram)
+
+- Create an object called "count" , with key as character of string and value as count of that character in the string
+- Loop through those two strings , one with increasing of count and other with decreasing of count
+
+```js copy
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+
+var isAnagram = function(s, t) {
+    if(s.length !== t.length)
+        return false;
+    
+    let count={};
+
+    for(let char of s){
+        count[char] = (count[char] || 0) + 1;
+    }
+    
+    for(let char of t){
+        if(!count[char])
+            return false;
+         count[char]--;
+    }
+    return true;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: 
+  - O(1) : If the character set is fixed (e.g., ASCII), the space required for the count object is O(1) since the number of unique characters is constant (256 for extended ASCII).
+  - O(k) : For Unicode or larger character sets, the space required could be O(k), where k is the number of unique characters in the input.
