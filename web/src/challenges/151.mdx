@@ -1,0 +1,44 @@
+### [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
+
+- Convert the string into an Array of words , iterate the array of words (except empty space) and push the words into another array called "result"
+- Reverse the resultant array and covert the array into string with space between words
+
+```js copy
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    let words = s.split(" ");
+    let result = [];
+    for(let word of words){
+        if(word.length)
+            result.push(word);
+    }
+    return result.reverse().join(" ");
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
+
+#### Another approach - one line solution
+
+- As like above, Convert the string into an Array of words , filter the words except empty space , reverse them and join the words with spaces in between them
+
+```js copy
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    return s.split(" ").filter(s => s.length > 0).reverse().join(" ");
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
