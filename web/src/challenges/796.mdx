@@ -1,0 +1,20 @@
+### [Rotate String](https://leetcode.com/problems/rotate-string)
+
+- check the input "goal" is contained in the concatination of the input "s" with itself and the both input length should same
+
+
+```js copy
+/**
+ * @param {string} s
+ * @param {string} goal
+ * @return {boolean}
+ */
+var rotateString = function (s, goal) {
+  return (s + s).includes(goal) && s.length === goal.length;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
