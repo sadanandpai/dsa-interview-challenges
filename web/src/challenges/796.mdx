@@ -10,7 +10,7 @@
  * @return {boolean}
  */
 var rotateString = function (s, goal) {
-  return (s + s).includes(goal) && s.length === goal.length;
+  return s === goal || (s + s).includes(goal) && s.length === goal.length;
 };
 ```
 
