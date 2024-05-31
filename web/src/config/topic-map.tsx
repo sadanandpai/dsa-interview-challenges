@@ -51,10 +51,11 @@ import C242 from '@/challenges/242.mdx';
 import C151 from '@/challenges/151.mdx';
 import C1903 from '@/challenges/1903.mdx';
 import C796 from '@/challenges/796.mdx';
+import C14 from '@/challenges/14.mdx';
 
 export const math = [C9, C7];
 export const array = [C268, C1929, C136, C1431, C2960, C1365, C1480, C1470, C1752, C1572, C2283, C1748, C485, C283, C189];
-export const string = [C151, C242, C796, C1662, C1903];
+export const string = [C14, C151, C242, C796, C1662, C1903];
 export const binarySearch = [C704, C367, C35, C744, C69, C34, C33, C153, C81, C154, C162, C1539, C875, C1482, C1283, C1011, C1552, C410, C774, C2009];
 export const twoPointers = [C344, C26, C167];
 export const stack = [C735, C946];
