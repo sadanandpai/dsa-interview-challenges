@@ -1,0 +1,56 @@
+### [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix)
+
+- The main function iteratively updates the common prefix by comparing it with each string in the array.
+- The getCommonPrefix function constructs the common prefix by comparing characters one by one until a mismatch occurs.
+
+
+```js copy
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    let i =0;
+    if(strs.length===1)
+        return strs[0];
+    let result ="";
+     result += getCommonPrefix(strs[0], strs[1]);
+    for(let i=2;i<strs.length;i++){
+       result= getCommonPrefix(result, strs[i]);
+    }
+    return result;
+};
+
+function getCommonPrefix(str1, str2){
+    let longStr;
+    let smallStr;
+    let result="";
+    if(str1[0] !== str2[0])
+        return "";
+   if(str1.length<=str2.length){
+       longStr = str2;
+       smallStr = str1;
+   }
+    else{
+        longStr = str1;
+       smallStr = str2;
+    }
+   for(let i=0;i<smallStr.length;i++){
+       if(longStr[i]=== smallStr[i]){
+           result+=longStr[i];
+       }
+       else{
+           return result;
+       }
+    } 
+    return result;
+}
+```
+
+##### Complexity
+
+- Time: O(N * M)
+  - Where N is the number of strings and M is the length of the shortest string among all the strings.
+- Space: O(M)
+  - Where M is the length of the shortest string among all the strings.
+
