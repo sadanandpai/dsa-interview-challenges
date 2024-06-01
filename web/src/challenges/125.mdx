@@ -1,0 +1,35 @@
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
+
+- The program cleans the input string by keeping only alphanumeric characters and converting them to lowercase.
+- It then checks if the cleaned string is equal to its reverse to determine if it is a palindrome.
+
+```js copy
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function (s) {
+  let cleanedStr = '';
+
+  // Helper function to check if a character is alphanumeric
+  function isAlphanumeric(char) {
+    return /^[a-zA-Z0-9]+$/.test(char);
+  }
+
+  // Build the cleaned string with only alphanumeric characters
+  for (let char of s) {
+    if (isAlphanumeric(char)) {
+      cleanedStr += char.toLowerCase();
+    }
+  }
+
+  // Compare the cleaned string with its reverse
+  let reversedStr = cleanedStr.split('').reverse().join('');
+  return cleanedStr === reversedStr;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
