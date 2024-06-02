@@ -1,0 +1,26 @@
+### [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
+
+- The program counts the frequency of each character in the input string s and calculates the length of the longest palindrome that can be formed using those characters.
+- It adds 2 to the length for every pair of characters and includes a central character if the original string length is greater than the count of pairs.
+
+```js copy
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var longestPalindrome = function(s) {
+  let longestCount = 0;
+  let charCountObj = {};
+
+    for (const char of s) {
+        charCountObj[char] = (charCountObj[char] || 0) + 1;
+        if (charCountObj[char] % 2 == 0) longestCount += 2;
+    }
+    return s.length > longestCount ? longestCount + 1 : longestCount;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(n)
