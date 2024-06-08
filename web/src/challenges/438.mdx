@@ -1,0 +1,76 @@
+### [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string)
+
+- Use Sliding window technique and check the every window is Anagram or not
+- if any window is Anagram, add its index to "res" array
+
+
+```js copy
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {number[]}
+ */
+var findAnagrams = function(s, p) {
+    let res = [];
+    let pCount = {};
+    let sCount = {};
+    let pLen = p.length;
+    let sLen = s.length;
+
+    // Populate the frequency count for the pattern p
+    for (let char of p) {
+        pCount[char] = (pCount[char] || 0) + 1;
+    }
+
+    // Initialize the frequency count for the first window of size p in s
+    for (let i = 0; i < pLen; i++) {
+        sCount[s[i]] = (sCount[s[i]] || 0) + 1;
+    }
+
+    // Compare the frequency count of the first window
+    if (isSameCount(pCount, sCount)) {
+        res.push(0);
+    }
+
+    // Slide the window over string s
+    for (let i = pLen; i < sLen; i++) {
+        // Add the new character to the current window count
+        sCount[s[i]] = (sCount[s[i]] || 0) + 1;
+        // Remove the character that is no longer in the window
+        let startChar = s[i - pLen];
+        if (sCount[startChar] > 1) {
+            sCount[startChar]--;
+        } else {
+            delete sCount[startChar];
+        }
+        // Compare the frequency count of the current window
+        if (isSameCount(pCount, sCount)) {
+            res.push(i - pLen + 1);
+        }
+    }
+
+    return res;
+};
+
+// Helper function to compare two frequency count objects
+const isSameCount = function(count1, count2) {
+    if (Object.keys(count1).length !== Object.keys(count2).length) {
+        return false;
+    }
+    for (let key in count1) {
+        if (count1[key] !== count2[key]) {
+            return false;
+        }
+    }
+    return true;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+  - The sliding window ensures that each character in s is processed only once.
+  - The comparison of frequency counts is efficient and does not depend on the length of s.
+- Space: O(1)
+  - The space used by the frequency count objects is limited to the number of distinct characters in p and s, which is constant (26 letters for lowercase English letters).
+
