@@ -1,0 +1,27 @@
+### [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list)
+
+- Copy the data from the successor node into the current node to be deleted.
+- Update the next pointer of the current node to reference the next pointer of the successor node.
+
+```js copy
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} node
+ * @return {void} Do not return anything, modify node in-place instead.
+ */
+var deleteNode = function(node) {
+node.val=node.next.val;
+node.next=node.next.next;
+};
+```
+
+##### Complexity
+
+- Time: O(1)
+- Space: O(1) 
