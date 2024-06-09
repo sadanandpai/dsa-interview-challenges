@@ -1,0 +1,36 @@
+### [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
+
+- Iterating through the list and reversing the direction of the next pointers of the nodes.
+- After the entire list is reversed, the head pointer is updated to point to the new head of the list, which was the original tail.
+
+
+```js copy
+/**
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    let prev = null,curr=head,next=null
+    while(curr!=null){
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head = prev;
+    return head;
+};
+```
+
+##### Complexity
+
+- Time: O(n)
+- Space: O(1)
