@@ -1,0 +1,29 @@
+import Image from 'next/image';
+import { Cards } from 'nextra/components';
+import { HeroImg } from '@/components/hero-img';
+import "@/app/app.css";
+
+export const metadata = {
+  title: 'DSA Inteview Challenges',
+};
+
+<div className="text-center">
+<br/>
+# Welcome to DSA Inteview Challenges
+
+A curated list of data structures & algorithms challenges with solutions to crack engineering interviews
+
+<HeroImg />
+</div>
+
+<Cards num={2}>
+  <Cards.Card className="card" title="Difficulty" href="/difficulty/" />
+  <Cards.Card className="card" title="Topics" href="/topics/" />
+</Cards>
+
+<br />
+<br />
+
+<div className="text-center">
+  Show your support by giving a ★ <br /> to [DSA Inteview Challenges](https://github.com/sadanandpai/dsa-interview-challenges) repo
+</div>

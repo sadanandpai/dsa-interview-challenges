@@ -1,16 +1,15 @@
-/** @type {import('next').NextConfig} */
-import nextra from "nextra";
+import nextra from 'nextra';
 
 const nextConfig = {
-  reactStrictMode: true,
   images: {
-    domains: ["*"],
+    domains: ['github.com'],
   },
 };
 
-const withNextra = nextra({
-  theme: "nextra-theme-docs",
-  themeConfig: "./theme.config.jsx",
-});
+// Set up Nextra with its configuration
+const withNextra = nextra({});
 
-export default withNextra(nextConfig);
+// Export the final Next.js config with Nextra included
+export default withNextra({
+  ...nextConfig,
+});

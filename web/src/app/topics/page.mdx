@@ -1,0 +1,41 @@
+import Image from 'next/image';
+import { Cards } from 'nextra/components';
+import { HeroImg } from '@/components/hero-img';
+import "@/app/app.css";
+
+export const metadata = {
+  title: 'Topics | DSA Inteview Challenges',
+};
+
+<div className="text-center">
+## Topic wise DSA Inteview Challenges
+
+A curated list of data structures & algorithms challenges with solutions to crack engineering interviews
+
+<HeroImg />
+</div>
+
+<Cards num={2}>
+  <Cards.Card className="card" title="Array" href="/topics/array/" />
+  <Cards.Card className="card" title="String" href="/topics/string/" />
+  <Cards.Card className="card" title="Math" href="/topics/math/" />
+  <Cards.Card className="card" title="Binary Search" href="/topics/binary-search/" />
+  <Cards.Card className="card" title="Two Pointers" href="/topics/two-pointers/" />
+  <Cards.Card className="card" title="Sliding Window" href="/topics/sliding-window/" />
+  <Cards.Card className="card" title="Stack" href="/topics/stack/" />
+  <Cards.Card className="card" title="Hash Table" href="/topics/hash-table/" />
+  <Cards.Card className="card" title="Heap" href="/topics/heap/" />
+  <Cards.Card className="card" title="Linked List" href="/topics/linked-list/" />
+  <Cards.Card className="card" title="Greedy" href="/topics/greedy/" />
+  <Cards.Card className="card" title="Tree" href="/topics/tree/" />
+  <Cards.Card className="card" title="Dynamic Programming" href="/topics/dynamic-programming/" />
+  <Cards.Card className="card" title="Backtracking" href="/topics/backtracking/" />
+  <Cards.Card className="card" title="Graph" href="/topics/graph/" />
+</Cards>
+
+<br />
+<br />
+
+<div className="text-center">
+  Show your support by giving a ★ <br /> to [DSA Inteview Challenges](https://github.com/sadanandpai/dsa-interview-challenges) repo
+</div>
