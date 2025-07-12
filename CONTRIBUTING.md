@@ -17,4 +17,4 @@
 
 - Navigate to web/src/challenges and create a file (.mdx) with name corresponding to its Leetcode problem number
 - Follow the template that you can see in the existing challenges
-- If multiple languages need support, use tabs (refer web/src/challenges/1470.mdx)
+- If multiple languages need support, use tabs (https://nextra.site/docs/built-ins/tabs)
